@@ -1,0 +1,21 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "Static frontend",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.6.5",
+    "jsx": "^0.9.89",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "requirejs": "^2.1.20"
+  },
+  "devDependencies": {
+    "react-tools": "~0.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Iso",
+  "license": "UNLICENSED"
+}

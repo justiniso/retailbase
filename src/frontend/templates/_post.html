@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-xs-12 col-md-8">
+        <div class="post">
+            <h1>{{post.title}}</h1>
+            <p class="spacey">
+                <a href="/todo">TODO DATE</a>
+            </p>
+            <!-- TODO: Tags go here-->
+            {% for item in post['items'] %}
+            <div class="item content">
+                <div class="photo">
+                    <h3 class="title">#{{loop.index}} {{item.title}}</h3>
+                    <img class="img-responsive" src="{{item.thumbnail_url}}" />
+                </div>
+                <div class="description">
+                    <div class="caption">
+                        <p>{{item.caption}}</p>
+                    </div>
+
+                </div>
+                <div class="actions">
+                    <button type="button" class="vote up">
+                      <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+                        Vote Higher
+                    </button>
+                    <button type="button" class="vote down">
+                      <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+                        Vote Lower
+                    </button>
+                    <span class="vote-count">{{item.votes}} votes</span>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    <div class="col-xs-6 col-md-4">
+    </div>
+
+</div>

@@ -1,0 +1,60 @@
+
+.banner {
+
+    @extend .alert;
+    @extend .alert-warning;
+    @extend h3;
+
+    background-color: $banner-color;
+    font-size: 21px;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+
+    a {
+        color: $medium-gray;
+        text-decoration: underline;
+    }
+
+    &.black {
+        background-color: black;
+        color: white;
+
+        a {
+            color: white;
+            &hover {
+                color: $light-gray;
+            }
+        }
+    }
+
+    &.blue {
+        background-color: $electric-blue;
+        color: white;
+
+        a {
+            color: white;
+            &hover {
+                color: $light-gray;
+            }
+        }
+    }
+
+    &.pink {
+        background-color: $electric-pink;
+        color: white;
+
+        a {
+            color: white;
+            &hover {
+                color: $light-gray;
+            }
+        }
+    }
+
+}
+
+

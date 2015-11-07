@@ -1,0 +1,14 @@
+.hashtag {
+
+    font-weight: bold;
+    margin-right: 1em;
+
+    &:before {
+        content: "#";
+    }
+
+    &a:hover {
+        text-decoration: underline;
+    }
+
+}

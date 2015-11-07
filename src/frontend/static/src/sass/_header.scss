@@ -1,0 +1,14 @@
+
+nav.navbar {
+
+    @include shadow();
+    @extend .navbar-static-top;
+
+    background-color: black;
+    color: white;
+
+    .container a {
+        color: white;
+        text-transform: uppercase;
+    }
+}

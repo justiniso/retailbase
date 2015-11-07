@@ -1,0 +1,6 @@
+Flask
+flask_mongoengine
+flask_restful
+psycopg2
+python-dateutil
+webassets

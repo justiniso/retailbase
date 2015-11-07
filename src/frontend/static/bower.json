@@ -1,0 +1,24 @@
+{
+  "name": "static",
+  "version": "0.0.0",
+  "homepage": "https://github.com/justiniso/listapp",
+  "authors": [
+    "Justin Iso <justin.james.iso@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "All Rights Reserved",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.14.0",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}

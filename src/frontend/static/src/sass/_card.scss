@@ -1,0 +1,23 @@
+.card {
+
+    @extend .panel;
+
+    border-radius: 0;
+    border: 1px solid $medium-gray;
+
+    .card-header {
+        @extend .panel-heading;
+        @extend h3;
+        margin-top: 0;
+
+        border-radius: 0;
+        background-color: black;
+        color: white;
+        outline: white;
+    }
+
+    .card-body {
+        @extend .panel-body;
+        outline: white;
+    }
+}

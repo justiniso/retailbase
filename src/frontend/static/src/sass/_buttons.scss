@@ -1,0 +1,41 @@
+@mixin button() {
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    outline: none;
+
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+
+button, input[type="text"] {
+    @include button();
+    @extend .btn;
+    @extend .btn-default;
+
+    &.vote.up {
+        border-color: $up-color;
+        color: $up-color;
+
+        &:hover {
+            background-color: $up-color;
+            color: #fff;
+        }
+    }
+
+    &.vote.down {
+        border-color: $down-color;
+        color: $down-color;
+
+        &:hover {
+            background-color: $down-color;
+            color: #fff;
+        }
+    }
+}
+
+
