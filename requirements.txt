@@ -1,4 +1,5 @@
 Flask
+Flask-Assets
 flask_mongoengine
 flask_restful
 gunicorn
