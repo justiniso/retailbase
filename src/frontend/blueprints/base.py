@@ -14,6 +14,12 @@ def home(_request=request):
     return render_template('home.html', posts=posts)
 
 
+@bp.route('/gifts/<tag>', methods=['GET'])
+def gifts(tag, _request=request):
+    posts = Post.objects(tags=tag)
+    return render_template('home.html', posts=posts, tag=tag)
+
+
 @bp.route('/healthcheck')
 def healthcheck(_request=request):
     return jsonify(result={'status': 'ok'})

@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import datetime
 import locale
+import urlparse
+import re
 
 from flask_restful import Resource, abort, Api, fields, marshal_with, reqparse
-from mongoengine import ValidationError, queryset_manager
+from mongoengine import ValidationError, queryset_manager, DoesNotExist
 
 from . import Base
 from src.api import api_app, db
@@ -23,6 +25,8 @@ class Post(Base, db.Document):
     publish_date = db.DateTimeField()
     delete_date = db.DateTimeField()
 
+    tags = db.ListField(db.StringField(max_length=30))
+
     @queryset_manager
     def objects(cls, queryset):
         """Default order of posts by descending date"""
@@ -31,6 +35,12 @@ class Post(Base, db.Document):
     def format_price(self):
         locale.setlocale(locale.LC_ALL, '')
         return locale.currency(self.price) if self.price else ''
+
+    def parse_domain(self):
+        """Extract the domain (netloc) from the link url. If it cannot be parsed, return empty string"""
+        domain = urlparse.urlparse(self.link_url).netloc
+        domain = domain.replace('www.', '').replace('www1.', '')
+        return domain
 
 public_fields = {
     'id': fields.String,
@@ -43,7 +53,15 @@ public_fields = {
     'publish_date': fields.DateTime,
     'create_date': fields.DateTime,
     'delete_date': fields.DateTime,
+    'tags': fields.List(fields.String),
 }
+
+
+def parse_tags(tagstring):
+    if tagstring is None:
+        return []
+    tagstring = re.sub(r'(,\s+)', ',', tagstring)
+    return [s.strip() for s in tagstring.split(',')]
 
 
 class PostResource(Resource):
@@ -72,12 +90,16 @@ class PostResource(Resource):
         parser.add_argument('thumbnail_url', type=str)
         parser.add_argument('link_url', type=str)
         parser.add_argument('publish_date', type=str)
+        parser.add_argument('tags', type=str)
 
         data = parser.parse_args(strict=True)
+
         # TODO: figure out a way to handle explicitly setting a certain property to none
         for key in data.keys():
             if data[key] is None:
                 data.pop(key)
+
+        data['tags'] = parse_tags(data['tags'])
         post.update(**data)
 
         return post
@@ -90,25 +112,53 @@ class PostsResource(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument('title', type=str, required=True)
         parser.add_argument('description', type=str, required=True)
-        parser.add_argument('slug', type=str, required=True)
+        parser.add_argument('slug', type=str)
         parser.add_argument('price', type=float)
         parser.add_argument('thumbnail_url', type=str)
         parser.add_argument('link_url', type=str)
         parser.add_argument('publish_date', type=str)
+        parser.add_argument('tags', type=str)
 
         data = parser.parse_args(strict=True)
-        data['slug'] = data['slug'].replace(' ', '-')
+        data['slug'] = data['slug'] or data['title']
+        data['slug'] = data['slug'].replace(' ', '-').lower()
+        data['tags'] = parse_tags(data['tags'])
+
+        # Find a unique slug
+        # Try to find an object with the slug; if none exist, use it. Otherwise
+        # continue to iterate over integers until we find one that does not exist
+        # TODO: make reusable and testable
+        while True:
+            try:
+                Post.objects.get(slug=data['slug'])
+            except DoesNotExist:
+                break
+            else:
+                count = data['slug'][-1]
+                if str.isdigit(count):
+                    data['slug'] = data['slug'][:-1] + str(int(count) + 1)
+                else:
+                    data['slug'] += '2'
 
         pst = Post(**data)
         pst.save()
 
         return pst
 
-    @marshal_with({'posts': fields.List(fields.Nested(public_fields))})
+    @marshal_with({'results': fields.List(fields.Nested(public_fields))})
     def get(self, limit=100):
         """Query endpoint"""
-        posts = Post.objects().limit(limit)
-        return posts
+        parser = reqparse.RequestParser()
+        parser.add_argument('tags', type=str)
+        data = parser.parse_args()
+
+        # TODO: abstract this please
+        for key in data.keys():
+            if data[key] is None:
+                data.pop(key)
+
+        posts = Post.objects(**data).limit(limit)
+        return {'results': posts}
 
 
 api = Api(api_app)

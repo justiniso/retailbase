@@ -3,20 +3,18 @@
 
     @extend .alert;
     @extend .alert-warning;
-    @extend h3;
 
     background-color: $banner-color;
-    font-size: 21px;
     text-align: center;
-    line-height: 40px;
-    color: black;
+    text-transform: uppercase;
+    color: white;
     width: 100%;
     border-radius: 0;
     margin: 0;
 
     a {
-        color: $medium-gray;
-        text-decoration: underline;
+        color: white;
+        font-weight: bold;
     }
 
 }

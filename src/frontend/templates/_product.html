@@ -1,7 +1,12 @@
-<article class="product-box" data-post-id="{{ post.id }}">
+<article class="product-box" data-post-id="{{ post.id }}" data-tags="{{ post.tags }}">
     <div class="inner">
-        <img class="image" src="{{ post.thumbnail_url }}">
-        <h3 class="title">{{ post.title }}</h3>
-        <a class="btn price" href="{{ post.link_url }}">{{ post.format_price() }}</a>
+        <a href="/gift/{{ post.slug }}"><img class="image" src="{{ post.thumbnail_url }}"></a>
+        <h3 class="title"><a href="/gift/{{ post.slug }}">{{ post.title }}</a></h3>
+        <a class="btn price" href="{{ post.link_url }}">{{ 'Buy {}'.format(post.format_price()) }}</a>
+        {% if post.parse_domain() %}
+            on <a href="{{ post.link_url }}" class="domain">{{ post.parse_domain() }}</a>
+        {% endif %}
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-facebook"></i>
     </div>
 </article>

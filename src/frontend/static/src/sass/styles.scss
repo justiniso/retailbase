@@ -7,6 +7,7 @@
 @import "bootstrap";
 
 
+$electric-blue: #2196F3;
 $stone-blue: #3D607A;
 $light-blue: #9be0ff;
 $lighter-blue: #afe6ff;
@@ -16,7 +17,6 @@ $strong-blue: #293a7a;
 
 $electric-yellow: #fff000;
 $electric-pink: #EA0788;
-$electric-red: red;
 
 $dark-gray: #333;
 $medium-gray: #a1aaad;
@@ -27,7 +27,7 @@ $lightest-gray: f5f7f8;
 $pale-cream: #fcf5e2;
 $cool-grey: #f7f7fa;
 
-$banner-color: $electric-yellow;
+$banner-color: $electric-blue;
 
 $text-color-bold: black;
 $text-color-dark: rgb(55, 55, 55);
@@ -42,7 +42,6 @@ $link-color-hover: $light-blue;
 
 $logo-color: black;
 
-@import "_colors";
 @import "_reset";
 @import "_mixins";
 @import "_banner";

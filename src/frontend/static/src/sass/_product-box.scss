@@ -1,20 +1,33 @@
+// Override titles that will get link colors
+.title a, a.title {
+    color: $text-color-bold;
+
+    &:hover {
+        text-decoration: none;
+        color: $text-color-dark;
+    }
+}
+
+
 .product-grid {
     @extend .row;
 }
 
 .product-box {
 
-    @extend .panel;
-
     // To make the grid work
-    @extend .col-xs-6;
+    @extend .col-xs-12;
     @extend .col-sm-4;
 
     >.inner {
-        border-radius: 2px;
+
+        @extend .panel;
+        @include subtle-shadow();
+
+        border-radius: 3px;
         padding: 8px;
         margin-right: 8px;
-        border: 1px solid $light-gray;
+        border: 1px solid $lighter-gray;
 
         img {
             width: 100%;
@@ -23,8 +36,13 @@
         .description {
             @extend p;
             font-size: 0.8em;
+        }
     }
-    }
+}
 
+.product-view {
 
+    @extend .panel;
+
+    padding: 50px;
 }

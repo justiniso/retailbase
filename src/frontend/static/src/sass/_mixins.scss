@@ -3,3 +3,9 @@
     -webkit-box-shadow: 2px 1px 6px 0px #333;
     box-shadow: 2px 1px 6px 0px #333;
 }
+
+@mixin subtle-shadow() {
+    -moz-box-shadow: 1px 1px 2px 0px #EFEFEF;
+    -webkit-box-shadow: 1px 1px 2px 0px #EFEFEF;
+    box-shadow: 1px 1px 2px 0px #EFEFEF;
+}
