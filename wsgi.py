@@ -36,8 +36,5 @@ if __name__ == '__main__':
 else:
     mongo_uri = os.environ['MONGOLAB_URI']
 
-    api_app.debug = False
-    frontend_app.debug = False
-
     api_app.config['MONGODB_HOST'] = mongo_uri
     api_app.config['MONGODB_DATABASE'] = 'app'
