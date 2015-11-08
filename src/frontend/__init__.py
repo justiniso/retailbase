@@ -3,8 +3,7 @@
 import os
 
 from webassets import Bundle
-from flask_assets import Environment
-from flask_pymongo import PyMongo
+from flask.ext.assets import Environment
 
 from . import blueprints
 from src import appfactory
