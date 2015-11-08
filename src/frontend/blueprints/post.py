@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import requests
-
-from flask import Blueprint, request, render_template, jsonify, send_from_directory
+from flask import Blueprint, request, render_template
 from src.api.model.post import Post
 
 from src.frontend.blueprints import base
