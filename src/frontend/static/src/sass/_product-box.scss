@@ -1,0 +1,30 @@
+.product-grid {
+    @extend .row;
+}
+
+.product-box {
+
+    @extend .panel;
+
+    // To make the grid work
+    @extend .col-xs-6;
+    @extend .col-sm-4;
+
+    >.inner {
+        border-radius: 2px;
+        padding: 8px;
+        margin-right: 8px;
+        border: 1px solid $light-gray;
+
+        img {
+            width: 100%;
+        }
+
+        .description {
+            @extend p;
+            font-size: 0.8em;
+    }
+    }
+
+
+}

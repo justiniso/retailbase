@@ -1,0 +1,7 @@
+<article class="product-box" data-post-id="{{ post.id }}">
+    <div class="inner">
+        <img class="image" src="{{ post.thumbnail_url }}">
+        <h3 class="title">{{ post.title }}</h3>
+        <a class="btn price" href="{{ post.link_url }}">{{ post.format_price() }}</a>
+    </div>
+</article>

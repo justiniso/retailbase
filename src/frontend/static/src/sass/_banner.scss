@@ -19,42 +19,6 @@
         text-decoration: underline;
     }
 
-    &.black {
-        background-color: black;
-        color: white;
-
-        a {
-            color: white;
-            &hover {
-                color: $light-gray;
-            }
-        }
-    }
-
-    &.blue {
-        background-color: $electric-blue;
-        color: white;
-
-        a {
-            color: white;
-            &hover {
-                color: $light-gray;
-            }
-        }
-    }
-
-    &.pink {
-        background-color: $electric-pink;
-        color: white;
-
-        a {
-            color: white;
-            &hover {
-                color: $light-gray;
-            }
-        }
-    }
-
 }
 
 

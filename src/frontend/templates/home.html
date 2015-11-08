@@ -1,5 +1,11 @@
 {% extends "main.html" %}
 
 {% block container %}
+<div class="product-group">
+    <h1>Newest gift ideas</h1>
+    {% for post in posts %}
+        {% include "_product.html" %}
+    {% endfor %}
+</div>
 
 {% endblock %}

@@ -1,14 +1,46 @@
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic,900);
 
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
-
-// Import custom Bootstrap variables
 @import "bootstrap-variables";
-
-// Import Bootstrap for Sass
 @import "bootstrap";
 
+
+$stone-blue: #3D607A;
+$light-blue: #9be0ff;
+$lighter-blue: #afe6ff;
+$lightest-blue: #e5f7ff;
+
+$strong-blue: #293a7a;
+
+$electric-yellow: #fff000;
+$electric-pink: #EA0788;
+$electric-red: red;
+
+$dark-gray: #333;
+$medium-gray: #a1aaad;
+$light-gray: #D8DCDF;
+$lighter-gray: #edeff0;
+$lightest-gray: f5f7f8;
+
+$pale-cream: #fcf5e2;
+$cool-grey: #f7f7fa;
+
+$banner-color: $electric-yellow;
+
+$text-color-bold: black;
+$text-color-dark: rgb(55, 55, 55);
+$text-color-subtle: #737373;
+$text-color-subtler: #bbb;
+
+$up-color: $electric-pink;
+$down-color: $stone-blue;
+
+$link-color: $stone-blue;
+$link-color-hover: $light-blue;
+
+$logo-color: black;
 
 @import "_colors";
 @import "_reset";
@@ -19,4 +51,4 @@
 @import "_hashtag";
 @import "_header";
 @import "_footer";
-@import "_post";
+@import "_product-box";

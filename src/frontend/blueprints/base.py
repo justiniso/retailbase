@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from flask import Blueprint, request, render_template, jsonify, send_from_directory
+from src.api.model.post import Post
 
 bp = Blueprint(
     'home',
@@ -9,7 +10,8 @@ bp = Blueprint(
 
 @bp.route('/', methods=['GET'])
 def home(_request=request):
-    return render_template('home.html')
+    posts = Post.objects[:100]
+    return render_template('home.html', posts=posts)
 
 
 @bp.route('/healthcheck')
