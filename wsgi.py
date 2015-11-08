@@ -23,7 +23,6 @@ application = DispatcherMiddleware(frontend_app, {'/api': api_app})
 
 # Dev mode
 if __name__ == '__main__':
-    from src.api.model import db, Base
 
     frontend_app.config['ASSETS_DEBUG'] = True
 
@@ -32,3 +31,13 @@ if __name__ == '__main__':
     frontend_app.debug = True
 
     run_simple('127.0.0.1', 5000, application, use_reloader=True, use_debugger=True, threaded=False)
+
+# PRODUCTION
+else:
+    mongo_uri = os.environ['MONGOLAB_URI']
+
+    api_app.debug = False
+    frontend_app.debug = False
+
+    api_app.config['MONGODB_HOST'] = mongo_uri
+    api_app.config['MONGODB_DATABASE'] = 'app'
