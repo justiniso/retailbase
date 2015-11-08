@@ -1,6 +1,7 @@
 Flask
 flask_mongoengine
 flask_restful
+gunicorn
 psycopg2
 python-dateutil
 webassets

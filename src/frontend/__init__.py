@@ -40,5 +40,3 @@ def create_frontend_app():
 
 
 frontend_app = create_frontend_app()
-# TODO: In the future, frontend app should use the API
-mongo = PyMongo(frontend_app)
