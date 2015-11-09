@@ -35,8 +35,13 @@ def page_not_found(*args, **kwargs):
     return render_template('404.html'), 404
 
 
-# TODO: don't serve static files from flask
+# TODO: don't serve static files from flask; use nginx or something
+import os
+
 @bp.route('/fonts/<path:path>')
 def static_fonts(path):
-    import os
     return send_from_directory(os.path.join(os.path.dirname(__file__), '..', 'static', 'fonts'), path)
+
+@bp.route('/static/<path:path>')
+def static_fonts(path):
+    return send_from_directory(os.path.join(os.path.dirname(__file__), '..', 'static'), path)
