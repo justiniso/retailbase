@@ -43,5 +43,5 @@ def static_fonts(path):
     return send_from_directory(os.path.join(os.path.dirname(__file__), '..', 'static', 'fonts'), path)
 
 @bp.route('/static/<path:path>')
-def static_fonts(path):
+def static(path):
     return send_from_directory(os.path.join(os.path.dirname(__file__), '..', 'static'), path)
