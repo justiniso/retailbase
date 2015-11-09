@@ -32,8 +32,3 @@ if __name__ == '__main__':
 
     run_simple('127.0.0.1', 5000, application, use_reloader=True, use_debugger=True, threaded=False)
 
-# PRODUCTION
-else:
-    mongo_uri = os.environ['MONGOLAB_URI']
-
-    api_app.config['MONGO_URI'] = mongo_uri
