@@ -24,7 +24,7 @@ application = DispatcherMiddleware(frontend_app, {'/api': api_app})
 # Dev mode
 if __name__ == '__main__':
 
-    frontend_app.config['ASSETS_DEBUG'] = True
+    # frontend_app.config['ASSETS_DEBUG'] = True
 
     # Activate debug mode for dev
     api_app.debug = True
