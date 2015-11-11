@@ -14,12 +14,10 @@ def create_frontend_app():
     static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
 
     css_bundle = Bundle(
-        'build/css/*.css',
-        output='public/main.css')
+        'build/css/*.css')
 
     js_bundle = Bundle(
-        'build/js/*.js',
-        output='public/main.js')
+        'build/js/*.js')
 
     fonts_bundle = Bundle(
         'fonts/bootstrap/*')
