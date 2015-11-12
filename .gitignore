@@ -64,11 +64,11 @@ target/
 # Virtualenv
 venv/
 
-src/frontend/static/.sass-cache
-src/frontend/static/.webassets-cache/
-src/frontend/static/node_modules
-src/frontend/static/bower_components
-src/frontend/static/build
+src/staticapp/.sass-cache
+src/staticapp/.webassets-cache/
+src/staticapp/node_modules
+src/staticapp/bower_components
+src/staticapp/build
 
 
 # Elastic Beanstalk Files
