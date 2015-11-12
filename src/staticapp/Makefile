@@ -1,7 +1,7 @@
 
 BUILD_SUBDIR=build/
 SOURCE_SUBDIR=src/
-PUBLIC_STATIC_DIR=../../assets
+PUBLIC_STATIC_DIR=../../static
 
 all:deps build
 
@@ -27,7 +27,7 @@ js-build:
 	./node_modules/.bin/r.js -o config.js out=${BUILD_SUBDIR}/js/main.js optimize=none
 
 static-finalize:
-	rm -r ${PUBLIC_STATIC_DIR}/*
+	rm -rf ${PUBLIC_STATIC_DIR}/*
 	cp -R ${BUILD_SUBDIR} ${PUBLIC_STATIC_DIR}
 
 
