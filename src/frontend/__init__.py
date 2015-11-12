@@ -8,7 +8,7 @@ from src import appfactory
 
 def create_frontend_app():
     template_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
-    static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'static')
+    static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'assets')
 
     app = appfactory.create_app(
         'frontend',

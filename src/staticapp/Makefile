@@ -1,7 +1,7 @@
 
 BUILD_SUBDIR=build/
 SOURCE_SUBDIR=src/
-PUBLIC_STATIC_DIR=../../static
+PUBLIC_STATIC_DIR=../../assets
 
 all:deps build
 
