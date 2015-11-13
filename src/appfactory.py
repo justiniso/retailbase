@@ -35,4 +35,11 @@ def create_app(package_name, blueprints=None, **kwargs):
     if blueprints:
         _register_blueprints(app, blueprints)
 
+    if not app.debug:
+        import logging
+        from logging import FileHandler
+        file_handler = FileHandler('/var/log/{}.log'.format(app.name))
+        file_handler.setLevel(logging.WARNING)
+        app.logger.addHandler(file_handler)
+
     return app
