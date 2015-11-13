@@ -33,7 +33,7 @@ class Post(Base, db.Document):
         return queryset.order_by('-date')
 
     def format_price(self):
-        locale.setlocale(locale.LC_ALL, '')
+        locale.setlocale(locale.LC_ALL, 'en_CA.UTF-8')
         return locale.currency(self.price) if self.price else ''
 
     def parse_domain(self):
