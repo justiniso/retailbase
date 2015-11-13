@@ -23,7 +23,7 @@ css-build:
 js-build:
 	echo "Building JS"
 	mkdir -p ${BUILD_SUBDIR}/js
-	cp node_modules/requirejs/require.js ${BUILD_SUBDIR}/js/_require.js
+	cp node_modules/requirejs/require.js ${BUILD_SUBDIR}/js/require.js
 	./node_modules/.bin/r.js -o config.js out=${BUILD_SUBDIR}/js/main.js optimize=none
 
 static-finalize:

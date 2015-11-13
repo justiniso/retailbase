@@ -3,10 +3,10 @@
 {% block head %}
 
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/main.css') }}" xmlns="http://www.w3.org/1999/html">
-
-
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
 
+    <!-- Require always be loaded first; make sure that's synchronous -->
+    <script type=text/javascript src="{{ url_for('static', filename='js/require.js') }}"></script>
     <script type=text/javascript src="{{ url_for('static', filename='js/main.js') }}" async></script>
 
 {% endblock %}
