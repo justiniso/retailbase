@@ -1,8 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic,900);
 
-// Import Bootstrap Compass integration
-@import "bootstrap-compass";
+// bootstrap
 @import "bootstrap-variables";
 @import "bootstrap";
 
@@ -42,10 +41,16 @@ $link-color-hover: $light-blue;
 
 $logo-color: black;
 
+// Media queries
+$breakpoint-desktop-min: 1025px;
+$breakpoint-tablet-max: 1024px;
+$breakpoint-tablet-min: 721px;
+$breakpoint-mobile-max: 720px;
+$breakpoint-mobile-min: 480px;
+
 @import "_reset";
 @import "_mixins";
 @import "_banner";
-@import "_card";
 @import "_buttons";
 @import "_hashtag";
 @import "_header";

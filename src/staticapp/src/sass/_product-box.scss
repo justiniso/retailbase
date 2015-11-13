@@ -10,18 +10,34 @@
 
 
 .product-grid {
+
     @extend .row;
+    @extend .card-columns;
+
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+
+    @media only screen and (max-device-width : $breakpoint-mobile-max) and (orientation : portrait) {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
 }
 
 .product-box {
 
     // To make the grid work
-    @extend .col-xs-12;
-    @extend .col-sm-4;
+    /*@extend .col-xs-12;*/
+    /*@extend .col-sm-4;*/
 
     >.inner {
 
-        @extend .panel;
+        @extend .card;
         @include subtle-shadow();
 
         border-radius: 3px;
@@ -29,8 +45,13 @@
         margin-right: 8px;
         border: 1px solid $lighter-gray;
 
+        overflow: hidden;
+
         img {
-            width: 100%;
+            display: block;
+            max-width: 100%;
+            width: auto;
+            height: auto;
         }
 
         .description {
@@ -41,8 +62,6 @@
 }
 
 .product-view {
-
-    @extend .panel;
 
     padding: 50px;
 }

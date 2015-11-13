@@ -14,8 +14,6 @@
 
 button, input[type="submit"], a.btn {
     @include button();
-    @extend .btn;
-    @extend .btn-default;
 
     &.vote.up {
         border-color: $up-color;
