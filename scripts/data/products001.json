@@ -5,7 +5,43 @@
     "link_url": "http://www.amazon.com/dp/B00TSUGXKE/",
     "price": 49.99,
     "slug": "amazon-fire-tablet-8gb-wifi",
-    "tags": "tech,gadgets,tablet,christmas,dad,him",
+    "tags": "tech,gadgets,tablet,christmas,dad,brother,boyfriend,uncle,him",
     "thumbnail_url": "http://i.imgur.com/wGS0x7w.jpg"
+  },
+  {
+    "title": "Harry & David Fruit and Pear Gift Box",
+    "description": "Even the most well organized people end up needing a gift delivery on short notice. No worries, Harry & David's impressive gourmet food can be delivered as last minute gifts. ",
+    "link_url": "http://www.harryanddavid.com/h/fruit-gift/fruit-cheese/20147",
+    "price": 69.99,
+    "slug": "harry-and-david-pears-fruit-gift-box",
+    "tags": "foodie,christmas,holiday,birthday,rush",
+    "thumbnail_url": "http://i.imgur.com/WX4QIbJ.jpg"
+  },
+  {
+    "title": "Maldon Sea Salt Flakes Pinch Tin",
+    "description": "As far as sea salt goes, Maldon is the best of the best. This is a stocking stuffer any foodie will adore. ",
+    "link_url": "http://www.amazon.com/Maldon-Sea-Salt-Flakes-Pinch/dp/B00GCDFRYS",
+    "price": 5.29,
+    "slug": "maldon-sea-salt-flakes-pinch-tin",
+    "tags": "foodie,stocking-stuffer,rush,acquaintance,coworker,friend",
+    "thumbnail_url": "http://i.imgur.com/5SyEXMg.jpg"
+  },
+  {
+    "title": "Nintendo New 3DS XL",
+    "description": "For the gamer in your life. The New Nintendo 3DS XL system combines next-generation portable gaming withsuper-stable 3D technology and added control features. Take 3D photos, connectwith friends, and enhance your gaming experiences with added amiibo support. The New Nintendo 3DS XL system plays all Nintendo DS games. ",
+    "link_url": "http://www.amazon.com/gp/product/B00S1LRX3W/",
+    "price": 195,
+    "slug": "nintendo-3ds-black-xl",
+    "tags": "tech,geek,gadgets,gamer,him,boyfriend,brother",
+    "thumbnail_url": "http://i.imgur.com/m4DuKcN.jpg"
+  },
+  {
+    "title": "Philips Norelco Shaver 9300",
+    "description": "The Series 9000 cuts hairs up to 30% closer to skin with its V-Track precision blades. The shaving heads, with Contour Detect Technology, move in 8 directions to cut up to 20% more hair in a single pass.",
+    "link_url": "http://www.amazon.com/gp/product/B00M1E54Q8",
+    "price": 199.95,
+    "slug": "philips-norelco-shaver-9300",
+    "tags": "holiday,christmas,birthday,gadgets,gamer,him,dad,boyfriend,brother",
+    "thumbnail_url": "http://i.imgur.com/IKz0tg5.jpg"
   }
 ]
