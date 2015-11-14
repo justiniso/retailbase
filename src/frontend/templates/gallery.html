@@ -1,7 +1,7 @@
 {% extends "main.html" %}
 
 {% block container %}
-<h1>Discover Great Last Minute Gift Ideas</h1>
+<h1>{{ h1 or 'Discover great gifts' }}</h1>
 <div class="product-grid">
     {% for post in posts %}
         {% include "_product.html" %}

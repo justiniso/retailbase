@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-from datetime import date
 
-from flask import Blueprint, request, render_template, jsonify, send_from_directory
+from flask import Blueprint, request, render_template, jsonify
 from src.api.model.post import Post
 
 bp = Blueprint(
@@ -15,13 +14,6 @@ def home(_request=request):
     posts = Post.objects[max(0, len(Post.objects) - 100): max(1, len(Post.objects) - 1)]
     posts = reversed(posts)
     return render_template('home.html', posts=posts)
-
-
-@bp.route('/gifts/<tag>', methods=['GET'])
-def gifts(tag, _request=request):
-    posts = Post.objects(tags=tag)
-    title = 'Last Minute {} Gifts for {}'.format(tag.capitalize(), date.today().year)
-    return render_template('home.html', posts=posts, tag=tag, title=title)
 
 
 @bp.route('/healthcheck')
