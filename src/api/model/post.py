@@ -16,7 +16,7 @@ class Post(Base, db.Document):
     __tablename__ = 'post'
 
     title = db.StringField(max_length=255, required=True)
-    description = db.StringField(max_length=255)
+    description = db.StringField(max_length=3000)
     slug = db.StringField(max_length=255, required=True)
     link_url = db.StringField(max_length=2080, required=True)
     price = db.FloatField(min_value=0)
@@ -147,15 +147,27 @@ class PostsResource(Resource):
 
     @marshal_with({'results': fields.List(fields.Nested(public_fields))})
     def get(self, limit=100):
-        """Query endpoint"""
+        """
+        Query endpoint
+
+        Prepend fields with "$regex:" if the search should be a regex
+        search on that field. Search terms will be joined by "and"
+        not "or"
+        """
+        regex_flag = '$regex:'
+
         parser = reqparse.RequestParser()
         parser.add_argument('tags', type=str)
+        parser.add_argument('title', type=str)
+        parser.add_argument('slug', type=str)
         data = parser.parse_args()
 
         # TODO: abstract this please
         for key in data.keys():
             if data[key] is None:
                 data.pop(key)
+            elif isinstance(data[key], basestring) and data[key].startswith(regex_flag):
+                data[key] = {'$regex': data[key].replace(regex_flag, '')}
 
         posts = Post.objects(**data).limit(limit)
         return {'results': posts}
