@@ -1,0 +1,11 @@
+
+.categories {
+    li {
+        list-style: none;
+        display: inline;
+
+        &:after {
+            content: " | ";
+        }
+    }
+}

@@ -2,6 +2,18 @@
 
 {% block container %}
 <h1>Discover Great Last Minute Gift Ideas</h1>
+<p>Even the most well organized people end up needing a gift delivery on short notice.
+    Whether your budget is $5 or $500, we've hand-picked the best gifts out there that
+    work for every occasion -- holidays, birthdays, weddings, anniversaries, Valentine's,
+    Mother's Day, and much more.</p>
+<ul class="categories">
+    <li><a href="/gifts/rush">0-2 day Delivery</a></li>
+    <li><a href="/gifts/her">Gifts for Her</a></li>
+    <li><a href="/gifts/him">Gifts for Him</a></li>
+    <li><a href="/gifts/stocking-stuffer">Stocking Stuffers</a></li>
+    <li><a href="/gifts/gadgets">Gifts &amp; Gadgets for Techies</a></li>
+    <li><a href="/gifts/foodie">Gifts for Foodies</a></li>
+</ul>
 <div class="product-grid">
     {% for post in posts %}
         {% include "_product.html" %}
