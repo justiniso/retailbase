@@ -1,39 +1,25 @@
-@mixin button() {
-    background-color: #fff;
+
+button, input[type="submit"], a.btn {
+
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 3px;
     outline: none;
 
+    border: 1px solid $link-color;
+    background-color: $link-color;
+    color: white;
+
     -moz-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
-}
 
-
-button, input[type="submit"], a.btn {
-    @include button();
-
-    &.vote.up {
-        border-color: $up-color;
-        color: $up-color;
-
-        &:hover {
-            background-color: $up-color;
-            color: #fff;
-        }
+    &:hover {
+        background-color: white;
+        color: $link-color;
     }
 
-    &.vote.down {
-        border-color: $down-color;
-        color: $down-color;
-
-        &:hover {
-            background-color: $down-color;
-            color: #fff;
-        }
-    }
 }
 
 
