@@ -43,5 +43,41 @@
     "slug": "philips-norelco-shaver-9300",
     "tags": "holiday,christmas,birthday,gadgets,gamer,him,dad,boyfriend,brother",
     "thumbnail_url": "http://i.imgur.com/IKz0tg5.jpg"
+  },
+  {
+    "title": "Critical Hit +5 Whiskey Stones of Frost",
+    "description": "D20 soapstones chill your drink without watering it down.",
+    "link_url": "http://www.thinkgeek.com/product/14d6/",
+    "price": 19.99,
+    "slug": "critical-hit-whiskey-stones",
+    "tags": "holiday,christmas,whiskey,alcohol,birthday,geek,gamer,him,dad,boyfriend,brother",
+    "thumbnail_url": "http://i.imgur.com/bZsNsxe.jpg"
+  },
+  {
+    "title": "Picardie Wine Carafe & Stackable Glasses",
+    "description": "Standard in French bistros and cafes, Picardie Carafe and Glasses are designed to be stacked and easily transported with just one hand. Picardie Wine Carafe & Stackable Glasses. The tumblers are made in France of durable tempered glass and are suitable for everything from from hot coffee and cafe au lait to breakfast juices and iced drinks.",
+    "link_url": "http://www.amazon.com/Picardie-Carafe-Stackable-Glasses-VC712-SET/dp/B009K56LZY",
+    "price": 49.95,
+    "slug": "picardie-carafe-stackable-glasses",
+    "tags": "holiday,christmas,wine,alcohol,birthday,foodie",
+    "thumbnail_url": "http://i.imgur.com/3CrkTBj.jpg"
+  },
+  {
+    "title": "Perfect Ice Ball Maker",
+    "description": "The larger ice balls are fun for the kids and a fancy topic for adult conversation. Makes for a great stocking stuffer for friends or coworkers.",
+    "link_url": "http://www.amazon.com/Chillz-Ice-Ball-Maker-Mold/dp/B00KI7QZ5Y",
+    "price": 8.75,
+    "slug": "chillz-ice-ball-maker",
+    "tags": "holiday,christmas,wine,whiskey,alcohol,birthday,foodie,stocking-stuffer,him,brother,boyfriend,husband,dad,uncle,coworker,acquaintance",
+    "thumbnail_url": "http://i.imgur.com/SvB8gYs.jpg"
+  },
+  {
+    "title": "Bormioli Rocco Selecta 7-Piece Whiskey Gift Set",
+    "description": "Beautiful classic cut whiskey set. An affordable gift that will impress.",
+    "link_url": "http://www.amazon.com/Bormioli-Rocco-Selecta-7-Piece-Whiskey/dp/B000WA9ROI/",
+    "price": 18.86,
+    "slug": "bormioli-whiskey-gift-set-7-piece",
+    "tags": "holiday,christmas,wine,whiskey,alcohol,birthday,foodie,stocking-stuffer,him,brother,boyfriend,husband,dad,uncle,coworker,acquaintance",
+    "thumbnail_url": "http://i.imgur.com/5o1FvUG.jpg"
   }
 ]

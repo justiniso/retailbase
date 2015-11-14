@@ -22,7 +22,7 @@
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem;
 
-    @media only screen and (max-width: $breakpoint-mobile-max) and (max-device-width: $breakpoint-mobile-max) {
+    @media screen and (max-width: $breakpoint-mobile-max), screen and (max-device-width: $breakpoint-mobile-max) {
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
