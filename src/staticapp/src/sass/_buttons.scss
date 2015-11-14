@@ -1,6 +1,9 @@
 
 button, input[type="submit"], a.btn {
 
+    @extend .btn;
+    @extend .btn-sm;
+
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 3px;

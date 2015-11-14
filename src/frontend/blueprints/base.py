@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from datetime import date
+
 from flask import Blueprint, request, render_template, jsonify, send_from_directory
 from src.api.model.post import Post
 
@@ -18,7 +20,8 @@ def home(_request=request):
 @bp.route('/gifts/<tag>', methods=['GET'])
 def gifts(tag, _request=request):
     posts = Post.objects(tags=tag)
-    return render_template('home.html', posts=posts, tag=tag)
+    title = 'Last Minute {} Gifts for {}'.format(tag.capitalize(), date.today().year)
+    return render_template('home.html', posts=posts, tag=tag, title=title)
 
 
 @bp.route('/healthcheck')

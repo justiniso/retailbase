@@ -70,4 +70,13 @@
 .product-view {
 
     padding: 50px;
+
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 500px;
+        max-height: 500px;
+        padding: 10px 0 40px 0;
+    }
 }

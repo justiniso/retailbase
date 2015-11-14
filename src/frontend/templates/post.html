@@ -3,7 +3,9 @@
 {% block container %}
     <div class="product-view">
         <h1 class="title"><a href="{{ post.link_url }}">{{ post.title }}</a></h1>
-        <img src="{{ post.thumbnail_url }}" />
+        <a href="{{ post.link_url }}">
+            <img src="{{ post.thumbnail_url }}" title="Buy on {{ post.parse_domain() }}"/>
+        </a>
         <p>{{ post.description }}</p>
         <a class="btn price" href="{{ post.link_url }}">{{ 'Buy {}'.format(post.format_price()) }}</a>
         {% if post.parse_domain() %}
