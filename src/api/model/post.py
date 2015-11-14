@@ -17,6 +17,7 @@ class Post(Base, db.Document):
 
     title = db.StringField(max_length=255, required=True)
     description = db.StringField(max_length=3000)
+    brand = db.StringField(max_length=255)
     slug = db.StringField(max_length=255, required=True)
     link_url = db.StringField(max_length=2080, required=True)
     price = db.FloatField(min_value=0)
@@ -47,6 +48,7 @@ public_fields = {
     'title': fields.String,
     'slug': fields.String,
     'description': fields.String,
+    'brand': fields.String,
     'price': fields.Float,
     'thumbnail_url': fields.String,
     'link_url': fields.String,
@@ -85,6 +87,7 @@ class PostResource(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument('title', type=str)
         parser.add_argument('description', type=str)
+        parser.add_argument('brand', type=str)
         parser.add_argument('slug', type=str)
         parser.add_argument('price', type=float)
         parser.add_argument('thumbnail_url', type=str)
@@ -100,6 +103,7 @@ class PostResource(Resource):
                 data.pop(key)
 
         data['tags'] = parse_tags(data['tags'])
+        data['brand'] = data.get('brand', post.parse_domain())
         post.update(**data)
 
         return post
@@ -112,6 +116,7 @@ class PostsResource(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument('title', type=str, required=True)
         parser.add_argument('description', type=str, required=True)
+        parser.add_argument('brand', type=str)
         parser.add_argument('slug', type=str)
         parser.add_argument('price', type=float)
         parser.add_argument('thumbnail_url', type=str)
@@ -121,8 +126,9 @@ class PostsResource(Resource):
 
         data = parser.parse_args(strict=True)
         data['slug'] = data['slug'] or data['title']
-        data['slug'] = data['slug'].replace(' ', '-').lower()
+        data['slug'] = data['slug'].replace(' ', '-').lower().strip()
         data['tags'] = parse_tags(data['tags'])
+        data['description'] = data['description'].encode('utf-8')
 
         # Find a unique slug
         # Try to find an object with the slug; if none exist, use it. Otherwise
@@ -141,6 +147,7 @@ class PostsResource(Resource):
                     data['slug'] += '2'
 
         pst = Post(**data)
+        pst.brand = pst.brand or pst.parse_domain()
         pst.save()
 
         return pst

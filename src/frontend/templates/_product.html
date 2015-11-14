@@ -1,12 +1,12 @@
 <article class="product-box" data-post-id="{{ post.id }}" data-tags="{{ post.tags }}">
     <div class="inner">
         <a href="/gift/{{ post.slug }}">
-            <img class="image" src="{{ post.thumbnail_url }}" title="Buy this gift on {{ post.parse_domain() }}">
+            <img class="image" src="{{ post.thumbnail_url }}" title="Buy this gift on {{ post.brand or post.parse_domain() }}">
         </a>
         <h3 class="title"><a href="/gift/{{ post.slug }}">{{ post.title }}</a></h3>
         <a class="btn price" href="{{ post.link_url }}">{{ 'Buy {}'.format(post.format_price()) }}</a>
         {% if post.parse_domain() %}
-            on <a href="{{ post.link_url }}" class="domain">{{ post.parse_domain() }}</a>
+            on <a href="{{ post.link_url }}" class="domain">{{ post.brand or post.parse_domain() }}</a>
         {% endif %}
         <i class="fa fa-twitter"></i>
         <i class="fa fa-facebook"></i>
