@@ -11,7 +11,7 @@ bp = Blueprint(
 
 @bp.route('/', methods=['GET'])
 def home(_request=request):
-    posts = Post.objects[max(0, len(Post.objects) - 100): max(1, len(Post.objects) - 1)]
+    posts = Post.objects[max(0, len(Post.objects) - 100): max(1, len(Post.objects))]
     posts = reversed(posts)
     return render_template('home.html', posts=posts)
 

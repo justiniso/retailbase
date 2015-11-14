@@ -1,12 +1,13 @@
 [
   {
-    "title": "Amazon Fire, 7\" Display, Wi-Fi, 8 GB",
+    "title": "Amazon Fire, 7\" Display",
+    "brand": "Amazon",
     "description": "Free two-day shipping with Amazon Prime",
-    "link_url": "http://www.amazon.com/dp/B00TSUGXKE/",
+    "link_url": "http://amzn.to/1NSUvgE",
     "price": 49.99,
     "slug": "amazon-fire-tablet-8gb-wifi",
     "tags": "tech,gadgets,tablet,christmas,dad,brother,boyfriend,uncle,him",
-    "thumbnail_url": "http://i.imgur.com/wGS0x7w.jpg"
+    "thumbnail_url": "http://i.imgur.com/PzN8kqV.jpg"
   },
   {
     "title": "Harry & David Fruit and Pear Gift Box",
@@ -19,8 +20,9 @@
   },
   {
     "title": "Maldon Sea Salt Flakes Pinch Tin",
+    "brand": "Amazon",
     "description": "As far as sea salt goes, Maldon is the best of the best. This is a stocking stuffer any foodie will adore. ",
-    "link_url": "http://www.amazon.com/Maldon-Sea-Salt-Flakes-Pinch/dp/B00GCDFRYS",
+    "link_url": "http://amzn.to/1NSUzgs",
     "price": 5.29,
     "slug": "maldon-sea-salt-flakes-pinch-tin",
     "tags": "foodie,stocking-stuffer,rush,acquaintance,coworker,friend",
@@ -28,8 +30,9 @@
   },
   {
     "title": "Nintendo New 3DS XL",
+    "brand": "Amazon",
     "description": "For the gamer in your life. The New Nintendo 3DS XL system combines next-generation portable gaming withsuper-stable 3D technology and added control features. Take 3D photos, connectwith friends, and enhance your gaming experiences with added amiibo support. The New Nintendo 3DS XL system plays all Nintendo DS games. ",
-    "link_url": "http://www.amazon.com/gp/product/B00S1LRX3W/",
+    "link_url": "http://amzn.to/1MJ8R2v",
     "price": 195,
     "slug": "nintendo-3ds-black-xl",
     "tags": "tech,geek,gadgets,gamer,him,boyfriend,brother",
@@ -37,8 +40,9 @@
   },
   {
     "title": "Philips Norelco Shaver 9300",
+    "brand": "Amazon",
     "description": "The Series 9000 cuts hairs up to 30% closer to skin with its V-Track precision blades. The shaving heads, with Contour Detect Technology, move in 8 directions to cut up to 20% more hair in a single pass.",
-    "link_url": "http://www.amazon.com/gp/product/B00M1E54Q8",
+    "link_url": "http://amzn.to/1kwtHHS",
     "price": 199.95,
     "slug": "philips-norelco-shaver-9300",
     "tags": "holiday,christmas,birthday,gadgets,gamer,him,dad,boyfriend,brother",
@@ -55,8 +59,9 @@
   },
   {
     "title": "Picardie Wine Carafe & Stackable Glasses",
+    "brand": "Amazon",
     "description": "Standard in French bistros and cafes, Picardie Carafe and Glasses are designed to be stacked and easily transported with just one hand. Picardie Wine Carafe & Stackable Glasses. The tumblers are made in France of durable tempered glass and are suitable for everything from from hot coffee and cafe au lait to breakfast juices and iced drinks.",
-    "link_url": "http://www.amazon.com/Picardie-Carafe-Stackable-Glasses-VC712-SET/dp/B009K56LZY",
+    "link_url": "http://amzn.to/1kwtN2f",
     "price": 49.95,
     "slug": "picardie-carafe-stackable-glasses",
     "tags": "holiday,christmas,wine,alcohol,birthday,foodie",
@@ -64,8 +69,9 @@
   },
   {
     "title": "Perfect Ice Ball Maker",
+    "brand": "Amazon",
     "description": "The larger ice balls are fun for the kids and a fancy topic for adult conversation. Makes for a great stocking stuffer for friends or coworkers.",
-    "link_url": "http://www.amazon.com/Chillz-Ice-Ball-Maker-Mold/dp/B00KI7QZ5Y",
+    "link_url": "http://amzn.to/1RVNnzh",
     "price": 8.75,
     "slug": "chillz-ice-ball-maker",
     "tags": "holiday,christmas,wine,whiskey,alcohol,birthday,foodie,stocking-stuffer,him,brother,boyfriend,husband,dad,uncle,coworker,acquaintance",
@@ -73,8 +79,9 @@
   },
   {
     "title": "Bormioli Rocco Selecta 7-Piece Whiskey Gift Set",
+    "brand": "Amazon",
     "description": "Beautiful classic cut whiskey set. An affordable gift that will impress.",
-    "link_url": "http://www.amazon.com/Bormioli-Rocco-Selecta-7-Piece-Whiskey/dp/B000WA9ROI/",
+    "link_url": "http://amzn.to/1RVNH1d",
     "price": 18.86,
     "slug": "bormioli-whiskey-gift-set-7-piece",
     "tags": "holiday,christmas,wine,whiskey,alcohol,birthday,foodie,stocking-stuffer,him,brother,boyfriend,husband,dad,uncle,coworker,acquaintance",
@@ -82,8 +89,9 @@
   },
   {
     "title": "The Selected Poetry of Rainer Maria Rilke ",
+    "brand": "Amazon",
     "description": "Beautiful translations of the Austrian poet's best works.",
-    "link_url": "http://www.amazon.com/gp/product/0679722017",
+    "link_url": "http://amzn.to/1kwtQv0",
     "price": 13.55,
     "slug": "poetry-of-rainer-maria-rilke",
     "tags": "holiday,christmas,spiritual,birthday,stocking-stuffer,coworker,acquaintance,her,wife,girlfriend,sister,aunt,grandmother",
@@ -91,15 +99,17 @@
   },
   {
     "title": "New Age Smudges and Herbs California White Sage",
+    "brand": "Amazon",
     "description": "Sage is one of the sacred herb among indigenous American people. The clean burning sage is used in the energy cleansing ritual known as smudging.",
-    "link_url": "http://www.amazon.com/New-Age-Smudges-Herbs-California/dp/B003OQQMV8/",
+    "link_url": "http://amzn.to/1kwtR20",
     "price": 5.90,
     "slug": "white-sage",
-    "tags": "holiday,christmas,spiritual,birthday,stocking-stuffer,coworker,acquaintance,her,wife,girlfriend,sister,aunt,grandmother",
+    "tags": "spiritual,birthday,stocking-stuffer,acquaintance,her,wife,girlfriend,sister,aunt,grandmother",
     "thumbnail_url": "http://i.imgur.com/Uk6it0n.jpg"
   },
   {
     "title": "Maple Bacon Scented Candle",
+    "brand": "Etsy",
     "description": "Set the mood for an epic meal by filling the atmosphere with the sultry aroma of this maple bacon scented candle. As soon as this soy wax candle's wick is lit, the room will fill with the intoxicating smell of cooked pork and your mouth will begin to water.",
     "link_url": "https://www.etsy.com/listing/219036214/bacon-candle-maple-bacon-scented-soy-man",
     "price": 7.95,
@@ -125,5 +135,25 @@
     "slug": "stew-leonards-gift-basket",
     "tags": "holiday,christmas,thanksgiving,valentines,birthday,foodie,fruit,basket,rush",
     "thumbnail_url": "http://i.imgur.com/7f3DblM.jpg"
+  },
+  {
+    "title": "Selfie stick",
+    "brand": "Amazon",
+    "description": "The Most Popular selfie stick on Amazon. With built-in Bluetooth remote control & great battery, allows you to take a self-photograph or group photos easily with a better photo sight.",
+    "link_url": "http://amzn.to/1MJ7ikX",
+    "price": 14.75,
+    "slug": "selfie-stick",
+    "tags": "holiday,christmas,birthday,funny,teen,rush,stocking-stuffer,gadgets,photographer,acquaintance,coworker",
+    "thumbnail_url": "http://i.imgur.com/mw9evc8.jpg"
+  },
+  {
+    "title": "Canary All-in-One Home Security Device",
+    "brand": "Amazon",
+    "description": "Home security shouldn't be scary, complicated, or frustrating. We've made it easy by combining motion sensing technology, a wide-angle HD camera, and temperature, humidity, and air quality sensors into a single device. Canary makes it easy to protect the people and places that matters most.",
+    "link_url": "http://amzn.to/1NSVZHO",
+    "price": 195,
+    "slug": "canary-home-security-device",
+    "tags": "holiday,christmas,birthday,gadgets,home,apartment",
+    "thumbnail_url": "http://i.imgur.com/5ojIvdJ.jpg"
   }
 ]

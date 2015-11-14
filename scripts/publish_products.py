@@ -29,7 +29,7 @@ def main():
     product_list = json.loads(data)
 
     for product in product_list:
-        time.sleep(0.3)
+        time.sleep(0.1)
 
         # Check to see if the same product exists already
         slug = product.get('slug')

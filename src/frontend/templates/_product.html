@@ -1,7 +1,7 @@
 <article class="product-box" data-post-id="{{ post.id }}" data-tags="{{ post.tags }}">
     <div class="inner">
         <a href="/gift/{{ post.slug }}">
-            <img class="image" src="{{ post.thumbnail_url }}" title="Buy this gift on {{ post.brand or post.parse_domain() }}">
+            <img class="image" src="{{ post.thumbnail_url }}" title="{{ post.title }} - last minute gift idea">
         </a>
         <h3 class="title"><a href="/gift/{{ post.slug }}">{{ post.title }}</a></h3>
         <a class="btn price" href="{{ post.link_url }}">{{ 'Buy {}'.format(post.format_price()) }}</a>
