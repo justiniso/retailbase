@@ -10,7 +10,8 @@ bp = Blueprint(
 
 @bp.route('/', methods=['GET'])
 def home(_request=request):
-    posts = Post.objects[:100]
+    posts = Post.objects[max(0, len(Post.objects) - 100): max(1, len(Post.objects) - 1)]
+    posts = reversed(posts)
     return render_template('home.html', posts=posts)
 
 
@@ -34,10 +35,3 @@ def styleguid(_request=request):
 def page_not_found(*args, **kwargs):
     return render_template('404.html'), 404
 
-
-# TODO: don't serve static files from flask; use nginx or something
-import os
-
-@bp.route('/fonts/<path:path>')
-def static_fonts(path):
-    return send_from_directory(os.path.join(os.path.dirname(__file__), '..', 'static', 'fonts'), path)
