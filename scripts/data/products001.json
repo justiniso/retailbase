@@ -104,7 +104,7 @@
     "link_url": "http://amzn.to/1kwtR20",
     "price": 5.90,
     "slug": "white-sage",
-    "tags": "spiritual,birthday,stocking-stuffer,acquaintance,her,wife,girlfriend,sister,aunt,grandmother",
+    "tags": "spiritual,stocking-stuffer,acquaintance,her,wife,girlfriend,sister,aunt,grandmother",
     "thumbnail_url": "http://i.imgur.com/Uk6it0n.jpg"
   },
   {
@@ -114,7 +114,7 @@
     "link_url": "https://www.etsy.com/listing/219036214/bacon-candle-maple-bacon-scented-soy-man",
     "price": 7.95,
     "slug": "maple-bacon-scented-candle",
-    "tags": "holiday,christmas,birthday,stocking-stuffer,coworker,acquaintance,him,brother,friend,father,uncle,bro",
+    "tags": "holiday,christmas,birthday,stocking-stuffer,coworker,acquaintance,him,brother,friend,father,uncle,bro,novelty",
     "thumbnail_url": "http://i.imgur.com/hifKVcu.jpg"
   },
   {
@@ -163,7 +163,37 @@
     "link_url": "http://amzn.to/1Yb7nBH",
     "price": 21.99,
     "slug": "slate-cheese-board-set",
-    "tags": "holiday,christmas,birthday,home,apartment,cheese,fruit,foodie,her,girlfriend,wife,aunt,grandmother,mothers-day",
+    "tags": "holiday,christmas,birthday,home,apartment,cheese,fruit,foodie,her,girlfriend,wife,aunt,grandmother,mothers-day,wedding",
     "thumbnail_url": "http://i.imgur.com/FBhc4bc.jpg"
+  },
+  {
+    "title": "Bohemian Wings Scarf",
+    "brand": "Etsy",
+    "description": "Hand-painted and digitally printed Art of Wide - Spread Wings, this highly detailed representation of Nature, Freedom and Beauty is my Labor of Love. Just put it over your shoulders to look & feel divine. This scarf would make the most amazing gift for your loved ones!",
+    "link_url": "https://www.etsy.com/listing/179041021/wings-scarf-bohemian-bird-feathers-shawl",
+    "price": 56,
+    "slug": "bohemian-wings-scarf",
+    "tags": "holiday,christmas,birthday,her,girlfriend,wife,aunt,grandmother,mothers-day,valentines,scarf,fashion,spiritual",
+    "thumbnail_url": "http://i.imgur.com/d51X3qw.jpg"
+  },
+  {
+    "title": "Le Creuset of Signature Enameled Cast Iron Dutch Oven",
+    "brand": "Amazon",
+    "description": "Prepare a gourmet meal with this le Creuset 3.5 Quart oval wide French oven that blends colorful design with impeccable functionality and versatility. Made from the iconic enameled cast iron, it is formed in two sand models that are used only once then polished, enameled, and fired twice. This unique production process yields a nonreactive cooking surface that can be used on any type of heat source: from the oven, to the grill, to most stove tops and is induction ready. Heat spreads throughout more evenly and is retained for longer, and the enameled surface requires no seasoning.",
+    "link_url": "http://amzn.to/1NT4ceZ",
+    "price": 179.95,
+    "slug": "le-creuset-dutch-cast-iron-oven",
+    "tags": "holiday,christmas,birthday,home,apartment,foodie,her,girlfriend,wife,aunt,grandmother,mothers-day,wedding",
+    "thumbnail_url": "http://i.imgur.com/RR1FglN.jpg"
+  },
+  {
+    "title": "Miracle Berry Fruit Tablets",
+    "brand": "ThinkGeek",
+    "description": "Miracle Fruits (sometimes called Miracle Berries) have been a secret wonder of the world for centuries. They \"magically\" make sour foods taste sweet! Lemons taste like candy. Throw tasting parties and trick your friends' taste buds.",
+    "link_url": "http://www.thinkgeek.com/product/ab3f/",
+    "price": 14.99,
+    "slug": "miracle-berry-fruit-tablets",
+    "tags": "birthday,fun,stocking-stuffer,birthday,boyfriend,girlfriend,coworker,acquaintance,secret-santa,novelty,kids,teens",
+    "thumbnail_url": "http://i.imgur.com/AVEpSBm.jpg"
   }
 ]
