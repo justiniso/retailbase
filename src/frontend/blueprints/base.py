@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask import Blueprint, request, render_template, jsonify
+from flask import Blueprint, request, render_template, jsonify, send_from_directory
 from src.api.model.post import Post
 
 bp = Blueprint(
@@ -22,9 +22,14 @@ def healthcheck(_request=request):
 
 
 @bp.route('/styleguide')
-def styleguid(_request=request):
+def styleguide(_request=request):
     return render_template('styleguide.html')
 
+@bp.route('/robots.txt')
+def robots(_request=request):
+    import os
+    template_dir = os.path.join(os.path.dirname(__file__), '..', 'templates')
+    return send_from_directory(template_dir, 'robots.txt')
 
 @bp.errorhandler(404)
 def page_not_found(*args, **kwargs):
