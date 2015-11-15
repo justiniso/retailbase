@@ -85,9 +85,9 @@ class PostResource(Resource):
         post = Post.objects.get_or_404(id=post_id)
 
         parser = reqparse.RequestParser()
-        parser.add_argument('title', type=str)
-        parser.add_argument('description', type=str)
-        parser.add_argument('brand', type=str)
+        parser.add_argument('title', type=unicode)
+        parser.add_argument('description', type=unicode)
+        parser.add_argument('brand', type=unicode)
         parser.add_argument('slug', type=str)
         parser.add_argument('price', type=float)
         parser.add_argument('thumbnail_url', type=str)
