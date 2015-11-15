@@ -38,7 +38,7 @@ def main():
             print 'Skipping product with not slug: {}'.format(product)
             continue
 
-        resp = requests.get(urlparse.urljoin(host, '/api/post'), params={'slug': product['slug'].lower()})
+        resp = requests.get(urlparse.urljoin(host, '/api/post'), params={'slug': '$regex:' + product['slug'].lower()})
 
         if resp.json()['results']:
             if update:

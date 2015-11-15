@@ -19,5 +19,13 @@
         {% include "_product.html" %}
     {% endfor %}
 </div>
+<div class="related">
+    <h4>Discover more gifts:</h4>
+    <p>
+    {% for tag in all_tags %}
+        <a class="hashtag" href="/gifts/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+    </p>
+</div>
 
 {% endblock %}

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Blueprint, request, render_template, jsonify, send_from_directory
-from src.api.model.post import Post
+from src.api.model.post import Post, db
 
 bp = Blueprint(
     'home',
@@ -12,8 +12,9 @@ bp = Blueprint(
 @bp.route('/', methods=['GET'])
 def home(_request=request):
     posts = Post.objects[max(0, len(Post.objects) - 100): max(1, len(Post.objects))]
+    all_tags = Post.objects.distinct('tags')
     posts = reversed(posts)
-    return render_template('home.html', posts=posts)
+    return render_template('home.html', posts=posts, all_tags=all_tags)
 
 
 @bp.route('/healthcheck')
