@@ -29,5 +29,5 @@ def post(slug, _request=request):
 def gifts(tag, _request=request):
     posts = Post.objects(tags=tag)
     title = 'Last Minute {} Gifts for {}'.format(tag.capitalize(), date.today().year)
-    h1 = '{} Gift Guide'.format(tag.capitalize())
+    h1 = '{} Gift Guide'.format(tag.title())
     return render_template('gallery.html', posts=posts, tag=tag, title=title, h1=h1)
