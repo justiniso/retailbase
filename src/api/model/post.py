@@ -122,6 +122,7 @@ class PostResource(Resource):
 def validate_slug(slug):
     assert slug
     assert str(slug)
+    assert slug.lower() == slug
     assert len(slug) < 50
     assert urllib.quote_plus(slug) == slug
 
