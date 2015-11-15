@@ -31,16 +31,16 @@ def main():
     for product in product_list:
         time.sleep(0.1)
 
-        # Check to see if the same product exists already
-        slug = product.get('slug')
+        # Check to see if the same product exists already, Slug is a unique key in this case
 
-        if not slug:
-            print 'Skipping product with not slug: {}'.format(product)
-            continue
+        # Handle legacy older slugs
+        resp = requests.get(urlparse.urljoin(host, '/api/post'), params={'slug': product['slug']})
 
-        resp = requests.get(urlparse.urljoin(host, '/api/post'), params={'slug': '$regex:' + product['slug'].lower()})
+        # Make sure all slugs going in are loweercase
+        product['slug'] = product['slug'].lower()
+        resp2 = requests.get(urlparse.urljoin(host, '/api/post'), params={'slug': product['slug']})
 
-        if resp.json()['results']:
+        if resp.json()['results'] or resp2.json()['results']:
             if update:
                 id = resp.json()['results'][0]['id']
                 resp = requests.put(urlparse.urljoin(host, '/api/post/{}'.format(id)), data=product)

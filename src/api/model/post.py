@@ -3,6 +3,7 @@ import datetime
 import locale
 import urlparse
 import re
+import urllib
 
 from flask_restful import Resource, abort, Api, fields, marshal_with, reqparse
 from mongoengine import ValidationError, queryset_manager, DoesNotExist
@@ -88,7 +89,6 @@ class PostResource(Resource):
         parser.add_argument('title', type=unicode)
         parser.add_argument('description', type=unicode)
         parser.add_argument('brand', type=unicode)
-        parser.add_argument('slug', type=str)
         parser.add_argument('price', type=float)
         parser.add_argument('thumbnail_url', type=str)
         parser.add_argument('link_url', type=str)
@@ -119,6 +119,13 @@ class PostResource(Resource):
         return {'status': 'ok'}
 
 
+def validate_slug(slug):
+    assert slug
+    assert str(slug)
+    assert len(slug) < 50
+    assert urllib.quote_plus(slug) == slug
+
+
 class PostsResource(Resource):
 
     @marshal_with(public_fields)
@@ -135,8 +142,7 @@ class PostsResource(Resource):
         parser.add_argument('tags', type=unicode)
 
         data = parser.parse_args(strict=True)
-        data['slug'] = data['slug'] or data['title']
-        data['slug'] = data['slug'].replace(' ', '-').lower().strip()
+        validate_slug(data['slug'])
         data['tags'] = parse_tags(data['tags'])
 
         # Find a unique slug
