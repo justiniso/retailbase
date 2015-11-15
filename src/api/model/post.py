@@ -108,6 +108,16 @@ class PostResource(Resource):
 
         return post
 
+    def delete(self, post_id):
+        try:
+            post = Post.objects.get(id=post_id)
+        except ValidationError:
+            post = Post.objects.get_or_404(slug=post_id)
+
+        post.delete()
+
+        return {'status': 'ok'}
+
 
 class PostsResource(Resource):
 
