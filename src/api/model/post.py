@@ -124,21 +124,20 @@ class PostsResource(Resource):
     @marshal_with(public_fields)
     def post(self):
         parser = reqparse.RequestParser()
-        parser.add_argument('title', type=str, required=True)
-        parser.add_argument('description', type=str, required=True)
+        parser.add_argument('title', type=unicode, required=True)
+        parser.add_argument('description', type=unicode, required=True)
         parser.add_argument('brand', type=str)
         parser.add_argument('slug', type=str)
         parser.add_argument('price', type=float)
         parser.add_argument('thumbnail_url', type=str)
         parser.add_argument('link_url', type=str)
         parser.add_argument('publish_date', type=str)
-        parser.add_argument('tags', type=str)
+        parser.add_argument('tags', type=unicode)
 
         data = parser.parse_args(strict=True)
         data['slug'] = data['slug'] or data['title']
         data['slug'] = data['slug'].replace(' ', '-').lower().strip()
         data['tags'] = parse_tags(data['tags'])
-        data['description'] = data['description'].encode('utf-8')
 
         # Find a unique slug
         # Try to find an object with the slug; if none exist, use it. Otherwise
