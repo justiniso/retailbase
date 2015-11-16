@@ -12,7 +12,7 @@
 .product-grid {
 
     @extend .row;
-    @extend .card-columns;
+    /*@extend .card-columns;
 
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -20,30 +20,32 @@
 
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
-    column-gap: 1.25rem;
+    column-gap: 1.25rem;*/
 
     @media screen and (max-width: $breakpoint-mobile-max), screen and (max-device-width: $breakpoint-mobile-max) {
-        -webkit-column-count: 1;
+        /*-webkit-column-count: 1;
         -moz-column-count: 1;
-        column-count: 1;
+        column-count: 1;*/
     }
 }
 
 .product-box {
 
     // To make the grid work
-    /*@extend .col-xs-12;*/
-    /*@extend .col-sm-4;*/
+    @extend .col-xs-12;
+    @extend .col-sm-12;
+    @extend .col-md-6;
+    @extend .col-lg-4;
 
     >.inner {
 
         @extend .card;
-        @include subtle-shadow();
 
         border-radius: 3px;
         padding: 12px;
         margin-right: 8px;
-        border: 1px solid $lighter-gray;
+        height: 370px;
+        border: none;
 
         overflow: hidden;
 
@@ -54,15 +56,24 @@
             display: block;
             margin: auto;
 
-            max-width: 100%;
-            max-height: 400px;
             width: auto;
-            height: auto;
+            height: 250px;
         }
 
         .description {
             @extend p;
             font-size: 0.8em;
+        }
+
+        .title {
+            font-weight: bold;
+            margin-top: 25px;
+
+        }
+
+        .lower-contents {
+            position: absolute;
+            bottom: 14px;
         }
     }
 }

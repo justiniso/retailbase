@@ -1,0 +1,15 @@
+
+.curation-group {
+
+    margin-top: 30px;
+    marin-bottom: 40px;
+
+    .curation-title {
+        @extend h4;
+        display: inline;
+    }
+
+    .link-to-more {
+        margin-left: 8px;
+    }
+}

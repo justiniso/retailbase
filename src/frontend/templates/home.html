@@ -14,11 +14,17 @@
     <li><a href="/gifts/gadgets">Gifts &amp; Gadgets for Techies</a></li>
     <li><a href="/gifts/foodie">Gifts for Foodies</a></li>
 </ul>
-<div class="product-grid">
-    {% for post in posts %}
-        {% include "_product.html" %}
-    {% endfor %}
-</div>
+{% for tag, posts in featured_posts.items() %}
+    <div class="curation-group">
+        <h3 class="curation-title">{{ tag.title() }}</h3>
+        <a class="link-to-more" href="/gifts/{{tag}}">see all</a>
+        <div class="product-grid">
+            {% for post in posts %}
+                {% include "_product.html" %}
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
 <div class="related">
     <h4>Discover more gifts:</h4>
     <p>
