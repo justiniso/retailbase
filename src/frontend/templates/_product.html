@@ -1,7 +1,9 @@
 <article class="product-box" data-post-id="{{ post.id }}" data-tags="{{ post.tags }}">
     <div class="inner">
         <a href="/gift/{{ post.slug }}">
-            <img class="image" src="{{ post.thumbnail_url }}" title="{{ post.title }} - last minute gift idea">
+            <div class="img-wrap">
+                <img class="image" src="{{ post.thumbnail_url }}" title="{{ post.title }} - last minute gift idea">
+            </div>
         </a>
 
         <div class="lower-contents">
