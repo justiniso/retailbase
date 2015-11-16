@@ -3,7 +3,6 @@
 {% block container %}
     <div class="product-view">
         <h1 class="title"><a href="{{ post.link_url }}">{{ post.title }}</a></h1>
-        <p>{{ post.description }}</p>
         <a class="btn price" href="{{ post.link_url }}">{{ 'Buy {}'.format(post.format_price()) }}</a>
         {% if post.parse_domain() %}
         on <a href="{{ post.link_url }}" class="domain">{{ post.parse_domain() }}</a>
@@ -11,6 +10,7 @@
         <a href="{{ post.link_url }}">
             <img src="{{ post.thumbnail_url }}" title="{{ post.title }} - last minute gift idea"/>
         </a>
+        <p>{{ post.description }}</p>
         <a class="btn price" href="{{ post.link_url }}">{{ 'Buy {}'.format(post.format_price()) }}</a>
         {% if post.parse_domain() %}
             on <a href="{{ post.link_url }}" class="domain">{{ post.parse_domain() }}</a>
