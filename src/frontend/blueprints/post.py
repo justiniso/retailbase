@@ -26,8 +26,11 @@ def post(slug, _request=request):
     related_posts = Post.objects(tags=related_tag, id__ne=pst.id)[0:6]
     related_posts = related_posts if len(related_posts) >= 3 else []
     title = '{} - Last Minute Gifts'.format(pst.title.capitalize())
-    print related_posts
-    return render_template('post.html', post=pst, title=title, related_tag=related_tag, related_posts=related_posts)
+    meta_description = '{}, and hundreds more gifts from our hand-picked list on LastMinGift.com. ' \
+                       'Fast shipping available for last-minute gifts.'.format(pst.title)
+
+    return render_template('post.html', post=pst, title=title, related_tag=related_tag,
+                           related_posts=related_posts, meta_description=meta_description)
 
 
 @bp.route('/gifts/<tag>', methods=['GET'])
@@ -35,4 +38,6 @@ def gifts(tag, _request=request):
     posts = Post.objects(tags=tag)
     title = 'Last Minute {} Gifts for {}'.format(tag.capitalize(), date.today().year)
     h1 = '{} Gift Guide'.format(tag.title())
-    return render_template('gallery.html', posts=posts, tag=tag, title=title, h1=h1)
+    meta_description = 'Find perfect {} gifts and hundreds more from our hand-picked list on LastMinGift.com. ' \
+                       'Fast shipping available for last-minute gifts.'.format(tag.title())
+    return render_template('gallery.html', posts=posts, tag=tag, title=title, h1=h1, meta_description=meta_description)
