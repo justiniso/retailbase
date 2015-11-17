@@ -29,8 +29,13 @@ def post(slug, _request=request):
     meta_description = '{}, and hundreds more gifts from our hand-picked list on LastMinGift.com. ' \
                        'Fast shipping available for last-minute gifts.'.format(pst.title)
 
-    return render_template('post.html', post=pst, title=title, related_tag=related_tag,
-                           related_posts=related_posts, meta_description=meta_description)
+    return render_template('post.html',
+                           post=pst,
+                           title=title,
+                           related_tag=related_tag,
+                           related_posts=related_posts,
+                           meta_description=meta_description,
+                           meta_image=pst.thumbnail_url)
 
 
 @bp.route('/gifts/<tag>', methods=['GET'])
@@ -40,4 +45,10 @@ def gifts(tag, _request=request):
     h1 = '{} Gift Guide'.format(tag.title())
     meta_description = 'Find perfect {} gifts and hundreds more from our hand-picked list on LastMinGift.com. ' \
                        'Fast shipping available for last-minute gifts.'.format(tag.title())
-    return render_template('gallery.html', posts=posts, tag=tag, title=title, h1=h1, meta_description=meta_description)
+    return render_template('gallery.html',
+                           posts=posts,
+                           tag=tag,
+                           title=title,
+                           h1=h1,
+                           meta_description=meta_description,
+                           meta_image=posts[0].thumbnail_url if posts else '')
