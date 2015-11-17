@@ -14,7 +14,7 @@ bp = Blueprint(
 def home(_request=request):
 
     content_count = 3
-    featured_tags = ['stocking-stuffer', 'rush', 'gadgets', 'star wars', 'foodie', 'her', 'him',
+    featured_tags = ['gadgets', 'stocking-stuffer', 'rush', 'star wars', 'foodie', 'her', 'him',
                      'alcohol', 'photographer', 'kids', 'hipster', 'coworker']
     featured_posts = OrderedDict()
 
