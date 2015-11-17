@@ -5,7 +5,8 @@
     marin-bottom: 40px;
 
     .curation-title {
-        @extend h4;
+        @extend h3;
+        font-size: 1.6em;
         display: inline;
     }
 

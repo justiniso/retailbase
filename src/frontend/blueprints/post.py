@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import random
 from datetime import date
 
 from flask import Blueprint, request, render_template
@@ -21,8 +22,12 @@ def post(slug, _request=request):
     except IndexError:
         return base.page_not_found()
 
+    related_tag = random.choice(pst.tags)
+    related_posts = Post.objects(tags=related_tag, id__ne=pst.id)[0:6]
+    related_posts = related_posts if len(related_posts) >= 3 else []
     title = '{} - Last Minute Gifts'.format(pst.title.capitalize())
-    return render_template('post.html', post=pst, title=title)
+    print related_posts
+    return render_template('post.html', post=pst, title=title, related_tag=related_tag, related_posts=related_posts)
 
 
 @bp.route('/gifts/<tag>', methods=['GET'])

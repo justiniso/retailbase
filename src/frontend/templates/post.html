@@ -19,14 +19,21 @@
         <br>
         <br>
 
-        <div class="related">
-            <h4>Discover more gifts:</h4>
+        {% if related_posts %}
+        <div class="related curation-group">
+            <h4 class="curation-title">More gifts in "{{ related_tag.title() }}"</h4>
+            <a class="link-to-more" href="/gifts/{{ related_tag }}">see all</a>
             <p>
-            {% for tag in post.tags %}
-                <a class="hashtag" href="/gifts/{{ tag }}">{{ tag }}</a>
-            {% endfor %}
+                <div class="product-grid">
+                {% for post in related_posts %}
+                    {% include "_product.html" %}
+                {% endfor %}
+                </div>
             </p>
         </div>
+        {% else %}
+        <div data-related-message="No related posts"></div>
+        {% endif %}
     </div>
 
 {% endblock %}
