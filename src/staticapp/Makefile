@@ -27,8 +27,8 @@ js-build:
 	./node_modules/.bin/r.js -o config.js out=${BUILD_SUBDIR}/js/main.js optimize=none
 
 static-finalize:
-	rm -rf ${PUBLIC_STATIC_DIR}/*
-	cp -R ${BUILD_SUBDIR} ${PUBLIC_STATIC_DIR}
+	cp -R ${BUILD_SUBDIR}/css ${PUBLIC_STATIC_DIR}
+	cp -R ${BUILD_SUBDIR}/js ${PUBLIC_STATIC_DIR}
 
 
 ### Clean ###
