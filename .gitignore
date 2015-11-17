@@ -70,6 +70,7 @@ src/staticapp/node_modules
 src/staticapp/bower_components
 src/staticapp/build
 
+stock/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
