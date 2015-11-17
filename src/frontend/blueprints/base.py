@@ -18,7 +18,8 @@ def home(_request=request):
     featured_posts = OrderedDict()
 
     for tag in featured_tags:
-        featured_posts[tag] = Post.objects(tags=tag)[0:content_count]
+        posts = Post.objects(tags=tag)
+        featured_posts[tag] = posts[max(0, len(posts) - content_count):len(posts)]
 
     all_tags = Post.objects.distinct('tags')
     return render_template('home.html', featured_posts=featured_posts, all_tags=all_tags)
