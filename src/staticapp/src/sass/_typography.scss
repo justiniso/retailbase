@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body, html {
+
+    color: #67757B;
+    background: white;
+    font-family: 'Lato', Helvetica Neue, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75em;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.005rem;
+
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+
+    &:hover {
+        text-decoration: none;
+
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: .08em;
+    line-height: 1.3em;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+}
+
+em                { font-style: italic; }
+strong            { font-weight: 800; }
+h1, h2, h3        { font-weight: 800; margin-top: 1.5rem; }
+h4, h5, h6        { font-weight: 400; color: #222; margin: 1em 0; }
+h1                { font-size: 1.6em; line-height: 1.33em;}
+h2                { font-size: 1.3em; line-height: 1.25em; }
+h3                { font-size: 1.1em; }
+h4                { font-size: 1em; }
+h5                { font-size: 0.78em; }
+h6                { font-size: 0.67em; }
+h4, h5, h6        { text-transform: uppercase; letter-spacing: 0.15em; }
+p, ul, pre, table { margin: 0; margin-bottom: 1em; }
+code, pre         { font-size: 0.9em; color: #222;}
+
+blockquote        { border-left: 2px solid #222; color: #222; padding-left: 2em; margin: 0; }
+hr                { border: 0; height: 2px; display: block; margin: 4em auto; background: #222; }
+table             { width: 100%; }
+th, td            { padding: 1em; text-align: center;}
+td                { font-size: 0.88em; }
+th {
+  border-bottom: 1px solid #222;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7em;
+  text-align: center;
+  color: #222;
+}
+dt{ font-weight:bold;}
+
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
+}

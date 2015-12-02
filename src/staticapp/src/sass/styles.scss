@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600);
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900italic,900);
 
 // bootstrap
 @import "bootstrap-variables";
@@ -49,6 +47,7 @@ $breakpoint-mobile-max: 720px;
 $breakpoint-mobile-min: 480px;
 
 @import "_reset";
+@import "_typography";
 @import "_mixins";
 @import "_banner";
 @import "_buttons";
@@ -57,4 +56,4 @@ $breakpoint-mobile-min: 480px;
 @import "_footer";
 @import "_home";
 @import "_product-box";
-@import "_curation-group";
+@import "_category";

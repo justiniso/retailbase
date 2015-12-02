@@ -1,30 +1,35 @@
 {% extends "main.html" %}
 
 {% block container %}
-<h1>Discover Great Last Minute Gift Ideas</h1>
-<p>Even the most well organized people end up needing a gift delivery on short notice.
-    Whether your budget is $5 or $500, we've hand-picked the best gifts out there that
-    work for every occasion -- holidays, birthdays, weddings, anniversaries, Valentine's,
-    Mother's Day, and much more.</p>
+<figure class="featured-category">
+    <div class="featured-category-image" style="background: url(http://i.imgur.com/gv5QxX4.jpg) 50% 0 / cover no-repeat;"></div>
+    <figcaption>
+        <h1>Discover Great Last Minute Gift Ideas</h1>
+        <p>Even the most well organized people end up needing a gift delivery on short notice.
+            Whether your budget is $5 or $500, we've hand-picked the best gifts out there so you
+            don't have to.</p>
+        <a class="btn" href="/gifts/rush">Shop Super Last-Minute Gifts</a>
+    </figcaption>
+</figure>
+<section class="container fluid">
 
-{% for tag, posts in featured_posts.items() %}
-    <div class="curation-group">
-        <h3 class="curation-title">{{ tag.title() }}</h3>
-        <a class="link-to-more" href="/gifts/{{tag}}">see all</a>
-        <div class="product-grid">
-            {% for post in posts %}
-                {% include "_product.html" %}
-            {% endfor %}
+    {% for category in categories %}
+        <div class="curation-group">
+            <a href="/gifts/{{ category.slug }}">
+                <h3 class="curation-title">{{ category.title }}</h3>
+                <p>{{category.caption}}</p>
+                <p><img src="{{category.thumbnail_url}}"></p>
+            </a>
         </div>
-    </div>
-{% endfor %}
-<div class="related">
-    <h4>Discover more gifts:</h4>
-    <p>
-    {% for tag in all_tags %}
-        <a class="hashtag" href="/gifts/{{ tag }}">{{ tag }}</a>
     {% endfor %}
-    </p>
-</div>
+    <div class="related">
+        <h4>Discover more gifts:</h4>
+        <p>
+        {% for tag in all_tags %}
+            <a class="hashtag" href="/gifts/{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+        </p>
+    </div>
+</section>
 
 {% endblock %}

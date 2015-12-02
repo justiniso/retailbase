@@ -3,6 +3,8 @@ import random
 from datetime import date
 
 from flask import Blueprint, request, render_template
+from mongoengine import DoesNotExist
+from src.api.model.category import Category
 from src.api.model.post import Post
 
 from src.frontend.blueprints import base
@@ -40,14 +42,26 @@ def post(slug, _request=request):
 
 @bp.route('/gifts/<tag>', methods=['GET'])
 def gifts(tag, _request=request):
-    posts = Post.objects(tags=tag)
-    title = 'Last Minute {} Gifts for {}'.format(tag.capitalize(), date.today().year)
-    h1 = '{} Gift Guide'.format(tag.title())
+
+    # Check if there is a category for this; if not, use tags
+    tags = [tag]
+    category = None
+    try:
+        category = Category.objects.get(slug=tag)
+        tags = category.tags
+    except DoesNotExist:
+        pass
+
+    category_name = tag.title()
+
+    posts = Post.objects(tags__in=tags)
+    title = 'Last Minute {} Gifts for {}'.format(category_name, date.today().year)
+    h1 = category.title if category else '{} Gift Guide'.format(category_name)
     meta_description = 'Find perfect {} gifts and hundreds more from our hand-picked list on LastMinGift.com. ' \
-                       'Fast shipping available for last-minute gifts.'.format(tag.title())
+                       'Fast shipping available for last-minute gifts.'.format(category_name)
     return render_template('gallery.html',
                            posts=posts,
-                           tag=tag,
+                           tag=category_name,
                            title=title,
                            h1=h1,
                            meta_description=meta_description,

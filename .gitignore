@@ -64,6 +64,8 @@ target/
 # Virtualenv
 venv/
 
+cms
+
 src/staticapp/.sass-cache
 src/staticapp/.webassets-cache/
 src/staticapp/node_modules

@@ -2,6 +2,7 @@
 from collections import OrderedDict
 
 from flask import Blueprint, request, render_template
+from src.api.model.category import Category
 from src.api.model.post import Post
 
 
@@ -12,15 +13,8 @@ bp = Blueprint(
 
 @bp.route('/', methods=['GET'])
 def home(_request=request):
-
-    content_count = 3
-    featured_tags = ['gadgets', 'stocking-stuffer', 'rush', 'star wars', 'foodie', 'her', 'him',
-                     'alcohol', 'photographer', 'kids', 'hipster', 'coworker']
-    featured_posts = OrderedDict()
-
-    for tag in featured_tags:
-        posts = Post.objects(tags=tag)
-        featured_posts[tag] = posts[max(0, len(posts) - content_count):len(posts)]
+    featured_category_slugs = ['gifts-for-him', 'gadget-gifts']
+    categories = Category.objects(slug__in=featured_category_slugs)
 
     all_tags = Post.objects.distinct('tags')
-    return render_template('home.html', featured_posts=featured_posts, all_tags=all_tags)
+    return render_template('home.html', categories=categories, all_tags=all_tags)
