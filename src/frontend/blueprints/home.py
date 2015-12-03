@@ -13,8 +13,5 @@ bp = Blueprint(
 
 @bp.route('/', methods=['GET'])
 def home(_request=request):
-    featured_category_slugs = ['gifts-for-him', 'gadget-gifts']
-    categories = Category.objects(slug__in=featured_category_slugs)
-
     all_tags = Post.objects.distinct('tags')
-    return render_template('home.html', categories=categories, all_tags=all_tags)
+    return render_template('home.html', all_tags=all_tags)

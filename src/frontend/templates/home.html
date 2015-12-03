@@ -12,16 +12,43 @@
     </figcaption>
 </figure>
 <section class="container fluid">
-
-    {% for category in categories %}
-        <div class="curation-group">
-            <a href="/gifts/{{ category.slug }}">
-                <h3 class="curation-title">{{ category.title }}</h3>
-                <p>{{category.caption}}</p>
-                <p><img src="{{category.thumbnail_url}}"></p>
+    <div class="category-row">
+        <div class="category-box">
+            <a href="/gifts/gifts-for-him">
+                <figure class="category animated">
+                    <div class="category-image" style="background: url(http://i.imgur.com/FfeDz6c.jpg) 50% 0 / cover no-repeat;"></div>
+                    <figcaption class="category-caption">
+                        <h3>For the Guys</h3>
+                        <p>Shop gifts for guys</p>
+                    </figcaption>
+                </figure>
             </a>
         </div>
-    {% endfor %}
+        <div class="category-box">
+            <a href="/gifts/home">
+                <figure class="category animated">
+                    <div class="category-image" style="background: url(http://i.imgur.com/jawVEpF.jpg) 50% 0 / cover no-repeat;"></div>
+                    <figcaption class="category-caption">
+                        <h3>For the Home</h3>
+                        <p>Shop housewares, dining, lighting, and decor</p>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+    <div class="category-row">
+        <div class="category-box full-bleed">
+            <a href="/gifts/coffee">
+                <figure class="category animated">
+                    <div class="category-image" style="background: url(http://i.imgur.com/U1TqwtD.jpg) 50% 0 / cover no-repeat;"></div>
+                    <figcaption class="category-caption">
+                        <h3>For Coffee and Tea Lovers</h3>
+                        <p>Shop coffee and tea gifts</p>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
     <div class="related">
         <h4>Discover more gifts:</h4>
         <p>
