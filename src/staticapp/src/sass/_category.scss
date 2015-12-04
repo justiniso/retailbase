@@ -2,12 +2,13 @@
 .category-row {
 
     @extend .row;
-    margin-top: 30px;
 }
 
 .category-box {
     @extend .col-md-6;
     @extend .col-sm-12;
+
+    margin-top: 30px;
 
     &.full-bleed {
         @extend .col-lg-12;
@@ -67,7 +68,6 @@
         margin-top: 50px;
         margin-bottom: 50px;
         left: 0;
-        max-width: 800px;
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -100,5 +100,6 @@
 
     figcaption {
         @extend .category-caption;
+        max-width: 800px;
     }
 }
