@@ -17,6 +17,7 @@ class Category(Base, db.Document):
     body = db.StringField()
     slug = db.StringField(max_length=255, required=True)
     thumbnail_url = db.StringField(max_length=2080)
+    banner_url = db.StringField(max_length=2080)
     create_date = db.DateTimeField(default=datetime.datetime.now)
     tags = db.ListField(db.StringField(max_length=30))
 
@@ -33,6 +34,7 @@ public_fields = {
     'body': fields.String,
     'slug': fields.String,
     'thumbnail_url': fields.String,
+    'banner_url': fields.String,
     'create_date': fields.DateTime,
     'tags': fields.List(fields.String)
 }
@@ -67,7 +69,9 @@ class CategoryResource(Resource):
         parser.add_argument('title', type=unicode)
         parser.add_argument('caption', type=unicode)
         parser.add_argument('body', type=unicode)
+        parser.add_argument('slug', type=str)
         parser.add_argument('thumbnail_url', type=str)
+        parser.add_argument('banner_url', type=str)
         parser.add_argument('tags', type=str)
 
         data = parser.parse_args(strict=True)
@@ -111,7 +115,9 @@ class CategoriesResource(Resource):
         parser.add_argument('caption', type=unicode)
         parser.add_argument('body', type=unicode)
         parser.add_argument('slug', type=str)
+        parser.add_argument('banner_url', type=str)
         parser.add_argument('thumbnail_url', type=str)
+        parser.add_argument('banner_url', type=str)
         parser.add_argument('tags', type=unicode)
 
         data = parser.parse_args(strict=True)
@@ -169,4 +175,4 @@ class CategoriesResource(Resource):
 
 api = Api(api_app)
 api.add_resource(CategoriesResource, '/category')
-api.add_resource(CategoryResource, '/category/<post_id>')
+api.add_resource(CategoryResource, '/category/<category_id>')

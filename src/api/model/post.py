@@ -36,7 +36,8 @@ class Post(Base, db.Document):
 
     def format_price(self):
         locale.setlocale(locale.LC_ALL, 'en_CA.UTF-8')
-        return locale.currency(self.price) if self.price else ''
+        price = int(self.price)
+        return locale.currency(price).split('.')[0] if price else ''
 
     def parse_domain(self):
         """Extract the domain (netloc) from the link url. If it cannot be parsed, return empty string"""

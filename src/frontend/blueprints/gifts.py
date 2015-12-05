@@ -61,6 +61,7 @@ def gifts(tag, _request=request):
                        'Fast shipping available for last-minute gifts.'.format(category_name)
     return render_template('gallery.html',
                            posts=posts,
+                           category=category,
                            tag=category_name,
                            title=title,
                            h1=h1,

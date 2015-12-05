@@ -1,11 +1,29 @@
 {% extends "main.html" %}
 
 {% block container %}
-<h1>{{ h1 or 'Discover great gifts' }}</h1>
-<div class="product-grid">
-    {% for post in posts %}
-        {% include "_product.html" %}
-    {% endfor %}
-</div>
 
+{% if category.banner_url %}
+<figure class="featured-category">
+    <div class="featured-category-image" style="background: url({{ category.banner_url }}) 50% 0 / cover no-repeat;"></div>
+</figure>
+{% endif %}
+
+<div class="container fluid gallery">
+
+    <h1>{{ h1 or 'Discover great gifts' }}</h1>
+    {% if category.caption %}
+        <h2 class="caption">{{ category.caption }}</h2>
+    {% endif %}
+    <hr>
+    {% if category.body %}
+        <p class="body">{{ category.body }}</p>
+    {% endif %}
+
+    <div class="product-grid">
+        {% for post in posts %}
+            {% include "_product.html" %}
+        {% endfor %}
+    </div>
+    <hr>
+</div>
 {% endblock %}

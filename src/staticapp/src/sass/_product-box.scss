@@ -20,13 +20,16 @@
     @extend .col-xs-12;
     @extend .col-sm-12;
     @extend .col-md-6;
-    @extend .col-lg-4;
+    @extend .col-lg-6;
 
-    >.inner {
+    h1, h2, h3, h4, h5, h6, span, p, a {
+        text-align: center;
+    }
+
+    .inner {
 
         @extend .card;
 
-        border-radius: 3px;
         padding: 12px;
         margin-right: 8px;
         height: 370px;
@@ -63,12 +66,11 @@
         }
 
         .title {
-            font-weight: bold;
-            margin-top: 25px;
-
+            @extend h6;
         }
 
         .lower-contents {
+            width: 100%;
             position: absolute;
             bottom: 14px;
         }
