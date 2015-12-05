@@ -14,16 +14,24 @@
     {% if category.caption %}
         <h2 class="caption">{{ category.caption }}</h2>
     {% endif %}
-    <hr>
+
+    {% include "_share.html" %}
+
     {% if category.body %}
         <p class="body">{{ category.body }}</p>
     {% endif %}
+
+    <hr>
 
     <div class="product-grid">
         {% for post in posts %}
             {% include "_product.html" %}
         {% endfor %}
     </div>
+
     <hr>
+
+    {% include "_share.html" %}
+
 </div>
 {% endblock %}

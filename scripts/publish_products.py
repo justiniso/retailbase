@@ -40,10 +40,17 @@ def main():
         product['slug'] = product['slug'].lower()
         resp2 = requests.get(urlparse.urljoin(host, '/api/post'), params={'slug': product['slug']})
 
+
         if resp.json()['results'] or resp2.json()['results']:
             if update:
                 id = resp.json()['results'][0]['id']
-                resp = requests.put(urlparse.urljoin(host, '/api/post/{}'.format(id)), data=product)
+
+                # Delete the product if scheduled for deletion
+                if product.get('DELETE'):
+                    resp = requests.delete(urlparse.urljoin(host, '/api/post/{}'.format(id)))
+                else:
+                    resp = requests.put(urlparse.urljoin(host, '/api/post/{}'.format(id)), data=product)
+
                 if resp.status_code == 200:
                     print('Successfully updated: {}'.format(id))
                 else:

@@ -7,27 +7,21 @@
     <!-- Require always be loaded first; make sure that's synchronous -->
     <script type=text/javascript src="{{ url_for('static', filename='js/require.js') }}"></script>
     <script type=text/javascript src="{{ url_for('static', filename='js/main.js') }}?cb=1" async></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 {% endblock %}
 
 {% block body %}
 <nav class="navbar">
   <div class="container">
-    <div class="navbar-header">
-        <header>
-            <a class="logo navbar-brand" href="/">Last-Minute Gift Guide</a>
-            <h6 class="logo-caption">Find a gift they'll never forget</h6>
-        </header>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-
-        <ul class="nav navbar-nav">
-            <li><a href="/gifts/christmas">Christmas</a></li>
-            <li><a href="/gifts/rush">Rush</a></li>
-            <li><a href="/gifts/her">For Her</a></li>
-            <li><a href="/gifts/him">For Him</a></li>
-        </ul>
-    </div><!--/.nav-collapse -->
+      <div class="navbar-header">
+          <header>
+              <a class="logo navbar-brand" href="/">Last-Minute Gift Guide</a>
+              <div class="logo-caption">
+                  <h6>Find a gift they'll never forget</h6>
+              </div>
+          </header>
+      </div>
   </div>
 </nav>
 
@@ -39,4 +33,22 @@
 </footer>
 <!-- Pinterest Button -->
 <script async defer data-pin-hover="true" data-pin-color="white" src="//assets.pinterest.com/js/pinit.js"></script>
+<!-- Facebook SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '500734303430940',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 {% endblock %}

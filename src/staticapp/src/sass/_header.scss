@@ -4,7 +4,7 @@ nav.navbar {
     @include shadow();
     @extend .navbar-static-top;
 
-    .logo, .logo-caption {
+    .logo, .logo-caption, h1, h2, h3, h4, h5, h6, p, span {
         text-align: center;
     }
 
@@ -13,5 +13,32 @@ nav.navbar {
         margin: 0 3em 0 0;
         color: $logo-color;
         font-style: italic;
+    }
+
+    .logo-caption {
+        display: inline;
+        width: 100%;
+    }
+}
+
+.social {
+
+    margin: 20px auto;
+
+    .social-cta, .social-links {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .item {
+        display: inline;
+        position: relative;
+        height: 100%;
+        vertical-align: middle;
+        margin-left: 10px;
     }
 }
