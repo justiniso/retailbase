@@ -49,6 +49,7 @@
   "thumbnail_url": "http://i.imgur.com/IKz0tg5.jpg"
 },
 {
+  "DELETE": true,
   "title": "Critical Hit +5 Whiskey Stones of Frost",
   "description": "D20 soapstones chill your drink without watering it down.",
   "link_url": "http://www.thinkgeek.com/product/14d6/",
@@ -170,7 +171,7 @@
   "title": "Miracle Berry Fruit Tablets",
   "brand": "ThinkGeek",
   "description": "Miracle Fruits (sometimes called Miracle Berries) have been a secret wonder of the world for centuries. They \"magically\" make sour foods taste sweet! Lemons taste like candy. Throw tasting parties and trick your friends' taste buds.",
-  "link_url": "http://www.thinkgeek.com/product/ab3f/",
+  "link_url": "http://www.anrdoezrs.net/links/7934734/type/dlg/http://www.thinkgeek.com/product/ab3f/",
   "price": 14.99,
   "slug": "miracle-berry-fruit-tablets",
   "tags": "birthday,fun,stocking-stuffer,birthday,boyfriend,girlfriend,coworker,acquaintance,secret-santa,novelty,kids,teens",
@@ -217,6 +218,7 @@
   "thumbnail_url": "http://i.imgur.com/O1u5qKB.jpg"
 },
 {
+  "DELETE": true,
   "title": "Hario V60 Buono Coffee Drip Kettle, 1.2 L",
   "brand": "Amazon",
   "description": "Hario's V60 Buono Coffee Drip Kettle is a stunning stainless steel kettle that's easy to use, and offers a thin spout for easy pouring. Has a generous capacity of 27 ounces of liquid, or roughly 3-4 cups. Works with IH ranges, and gas and electric stoves. Is perfectly compatible with Hario's V60 Coffee Drippers.",
