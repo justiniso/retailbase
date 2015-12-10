@@ -6,10 +6,10 @@
           <a href="javascript:FB.ui({method: 'share',href: '{{ request.url }}'}, function(response){});"><i class="fa fa-facebook"></i></a>
         </div>
         <div class="item">
-          <a href="https://twitter.com/intent/tweet"><i class="fa fa-twitter"></i></a>
+          <a href="https://twitter.com/intent/tweet?url={{ request.url }}" target="_blank"><i class="fa fa-twitter"></i></a>
         </div>
         <div class="item">
-          <a href="https://www.pinterest.com/pin/create/button/?"><i class="fa fa-pinterest"></i></a>
+          <a href="https://www.pinterest.com/pin/create/button"><i class="fa fa-pinterest"></i></a>
         </div>
     </div>
 </div>
