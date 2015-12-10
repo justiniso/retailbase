@@ -43,12 +43,18 @@ def main():
 
         if resp.json()['results'] or resp2.json()['results']:
             if update:
-                id = resp.json()['results'][0]['id']
+                try:
+                    id = resp.json()['results'][0]['id']
+                except IndexError:
+                    id = resp2.json()['results'][0]['id']
 
                 # Delete the product if scheduled for deletion
-                if product.get('DELETE'):
+                if product.get('DELETE') is not None:
                     resp = requests.delete(urlparse.urljoin(host, '/api/post/{}'.format(id)))
                 else:
+                    # Remove fields that cannot be updated
+                    product.pop('slug', None)
+                    product.pop('DELETE', None)
                     resp = requests.put(urlparse.urljoin(host, '/api/post/{}'.format(id)), data=product)
 
                 if resp.status_code == 200:
