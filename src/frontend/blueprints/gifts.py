@@ -55,7 +55,10 @@ def gifts(tag, _request=request):
     category_name = tag.title()
 
     posts = Post.objects(tags__in=tags)
-    title = 'Last Minute {} Gifts for {}'.format(category_name, date.today().year)
+    if category:
+        title = '{} for {}'.format(category.title, date.today().year)
+    else:
+        title = 'Last Minute {} Gifts for {}'.format(category_name, date.today().year)
     h1 = category.title if category else '{} Gift Guide'.format(category_name)
     meta_description = 'Find perfect {} gifts and hundreds more from our hand-picked list on LastMinGift.com. ' \
                        'Fast shipping available for last-minute gifts.'.format(category_name)
