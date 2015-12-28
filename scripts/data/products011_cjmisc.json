@@ -1,0 +1,52 @@
+[
+ {
+    "title": "Roku Smart TV",
+    "brand": "Roku",
+    "price": 49.99,
+    "description": "Roku is a versatile little box that turns your dumb TV into a Smart TV. It makes streaming to your TV easy as pie, even for the most technically-challenged. Plenty of options to choose from to pick the right system for your recipient. ",
+    "thumbnail_url": "http://i.imgur.com/45LQPTV.jpg",
+    "slug": "roku-smart-tv",
+    "link_url": "http://www.anrdoezrs.net/links/7934734/type/dlg/https://www.roku.com/products/compare",
+    "tags": "gadgets,tech,tv,dad,fathers-day,grandpa,brother,uncle,boyfriend,home"
+},
+   {
+    "title": "NBA Tickets",
+    "brand": "SeatGeek",
+    "price": 100,
+    "description": "For a thoughtful last-minute gift for basketball fans, give them tickets to watch their favorite team play live. ",
+    "thumbnail_url": "http://i.imgur.com/gnFc4yq.jpg?1",
+    "slug": "seatgeek-nba-tickets",
+    "link_url": "http://www.kqzyfj.com/click-7934734-12357402-1450467534000",
+    "tags": "rush,sports,sports-tickets,tickets,nba,basketball,boyfriend,dad,brother,fathers-day"
+},
+  {
+    "title": "MLB Tickets",
+    "brand": "SeatGeek",
+    "price": 100,
+    "description": "Nothing more American than a baseball game. A classic and thoughtful gift.",
+    "thumbnail_url": "http://i.imgur.com/txqPhx4.jpg",
+    "slug": "seatgeek-mlb-tickets",
+    "link_url": "http://www.dpbolvw.net/click-7934734-12357395-1450467561000",
+    "tags": "rush,sports,sports-tickets,tickets,mlb,baseball,boyfriend,dad,brother,fathers-day"
+},
+  {
+    "title": "NFL Football Tickets",
+    "brand": "SeatGeek",
+    "price": 100,
+    "description": "Pick up some NFL tickets for an upcoming game if you're pressed for time. Your football fan will love them!",
+    "thumbnail_url": "http://i.imgur.com/r2uIDZr.jpg",
+    "slug": "seatgeek-nfl-tickets",
+    "link_url": "http://www.jdoqocy.com/click-7934734-12357397-1450467549000",
+    "tags": "rush,sports,sports-tickets,tickets,mlb,baseball,boyfriend,dad,brother,fathers-day"
+},
+  {
+    "title": "Concert Tickets",
+    "brand": "SeatGeek",
+    "price": 100,
+    "description": "Taylor Swift, Justin Bieber, Adele, and more. Concert tickets are always an impressive and thoughtful last-minute gift.",
+    "thumbnail_url": "http://i.imgur.com/l5ortDv.jpg",
+    "slug": "seatgeek-concert-tickets",
+    "link_url": "http://www.kqzyfj.com/click-7934734-12357242-1450467585000",
+    "tags": "rush,concert,tickets,concert-tickets,music"
+}
+]
