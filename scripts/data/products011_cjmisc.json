@@ -48,5 +48,25 @@
     "slug": "seatgeek-concert-tickets",
     "link_url": "http://www.kqzyfj.com/click-7934734-12357242-1450467585000",
     "tags": "rush,concert,tickets,concert-tickets,music"
+},
+  {
+    "title": "Magazine Subscription to USA Today",
+    "brand": "USA Today",
+    "price": 25,
+    "description": "Keeping up with current events can be exhausting, but with a USA Today subscription, they'll get magazines, online access, and mobile access for browsing on the go.",
+    "thumbnail_url": "http://i.imgur.com/LDxJTyH.jpg",
+    "slug": "usa-today-subscription",
+    "link_url": "http://www.jdoqocy.com/click-7934734-11980915-1430413859000",
+    "tags": "rush,magazine,subscription,magazine-subscription"
+},
+  {
+    "title": "Subscription for a Team of Personal Assistants",
+    "brand": "FancyHands",
+    "price": 50,
+    "description": "FancyHands gives you a team of personal assistants to schedule appointments, call customer service, and make reservations for you. A nice, relaxing gift for that someone who never seems to have enough time.",
+    "thumbnail_url": "http://i.imgur.com/ekNFk2Q.jpg?1",
+    "slug": "fancyhands-subscription",
+    "link_url": "http://fhands.com/jX9CN6n",
+    "tags": "rush,subscription,featured,mothers-day,fathers-day,coworker"
 }
 ]
