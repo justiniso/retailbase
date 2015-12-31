@@ -32,8 +32,8 @@
 
         padding: 12px;
         margin-right: 8px;
-        height: 370px;
         border: none;
+        min-height: 500px;
 
         overflow: hidden;
 
@@ -69,10 +69,19 @@
             @extend h6;
         }
 
+        .description {
+            text-align: justify;
+            text-decoration: none;
+            color: black;
+        }
+
+        .buy-cta {
+            text-align: center;
+        }
+
         .lower-contents {
             width: 100%;
-            position: absolute;
-            bottom: 14px;
+            position: relative;
         }
     }
 }

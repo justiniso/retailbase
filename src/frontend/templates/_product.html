@@ -10,12 +10,15 @@
             <div class="lower-contents">
 
                 <h6 class="title">{{ post.title }}</h6>
-                <p>
+                <p class="buy-cta">
                     Buy
                     {% if post.parse_domain() %}
                         on {{ post.brand or post.parse_domain() }},
                     {% endif %}
                     {{ post.format_price() }}
+                </p>
+                <p class="description">
+                    {{ post.description }}
                 </p>
             </div>
         </div>
