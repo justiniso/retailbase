@@ -1,6 +1,6 @@
 # listapp
-Stealth project
 
+Public site: [www.lastmingift.com](http://www.lastmingift.com/)
 
 Apps:
   - API App
@@ -10,7 +10,9 @@ Apps:
 
 Stack:
 
-- PostgreSQL
+- AWS Elastic Beanstalk (todo: move to DO)
+- MongoDB
+- Flask
 
 ## Frontend App
 
