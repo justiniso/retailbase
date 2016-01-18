@@ -2,24 +2,26 @@
 
 {% block container %}
 
-<figure class="featured-category">
+
     {% if category.banner_url %}
-        <div class="featured-category-image" style="background: url({{ category.banner_url }}) 50% 0 / cover no-repeat;"></div>
+        <figure class="featured-category">
+            <div class="featured-category-image" style="background: url({{ category.banner_url }}) 50% 0 / cover no-repeat;"></div>
+        </figure>
     {% elif posts.__len__() >= 3 %}
-
-        <div class="featured-category-image">
-            <div class="inner-wrap">
-                {% for post in posts %}
-                    <a href="{{post.link_url}}">
-                        <img src="{{post.thumbnail_url}}" title="{{post.title}}" >
-                    </a>
-                {% endfor %}
+        <figure class="featured-category">
+            <div class="featured-category-image">
+                <div class="inner-wrap">
+                    {% for post in posts %}
+                        <a href="{{post.link_url}}">
+                            <img src="{{post.thumbnail_url}}" title="{{post.title}}" >
+                        </a>
+                    {% endfor %}
+                </div>
             </div>
-        </div>
-
+        </figure>
     {% endif %}
 
-</figure>
+
 
 <div class="container fluid gallery">
 
