@@ -29,9 +29,20 @@
         {% endfor %}
     </div>
 
+    {% include "_share.html" %}
+
     <hr>
 
-    {% include "_share.html" %}
+    <h2>More Gift Ideas</h2>
+    <h6>Not finding anything here? <a href="/">Go back home</a></h6>
+    <br>
+    <br>
+    <br>
+    <div class="product-grid">
+        {% for post in featured_posts %}
+            {% include "_product.html" %}
+        {% endfor %}
+    </div>
 
 </div>
 {% endblock %}

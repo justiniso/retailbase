@@ -55,6 +55,7 @@ def gifts(tag, _request=request):
     category_name = tag.title()
 
     posts = Post.objects(tags__in=tags)
+    featured_posts = Post.objects(tags__in=['featured'])
     if category:
         title = '{} for {}'.format(category.title, date.today().year)
     else:
@@ -64,6 +65,7 @@ def gifts(tag, _request=request):
                        'Fast shipping available for last-minute gifts.'.format(category_name)
     return render_template('gallery.html',
                            posts=posts,
+                           featured_posts=featured_posts,
                            category=category,
                            tag=category_name,
                            title=title,
