@@ -4,3 +4,4 @@ flask_mongoengine
 flask_restful
 python-dateutil
 webassets
+gunicorn
