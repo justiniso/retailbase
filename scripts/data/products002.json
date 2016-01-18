@@ -1,27 +1,5 @@
 [
   {
-    "DELETE": true,
-    "title": "Amazon Gift Card - $25",
-    "brand": "Amazon",
-    "description": "Send an Amazon gift card for instant delivery.",
-    "price": 25,
-    "slug": "amazon-gift-card-25",
-    "thumbnail_url": "https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/generic_icons_15_noto_email_us-main._CB312740889_.png",
-    "link_url": "http://amzn.to/1H2AP8R",
-    "tags": "rush,holiday,birthday,coworker,acquaintance,stocking-stuffer,gift card"
-},
-  {
-    "DELETE": true,
-    "title": "Amazon Gift Card - $50",
-    "brand": "Amazon",
-    "description": "Send an Amazon gift card for instant delivery.",
-    "price": 50,
-    "slug": "amazon-gift-card-50",
-    "thumbnail_url": "https://images-na.ssl-images-amazon.com/images/G/01/gc/designs/livepreview/birthday_icons_15_noto_email_us-main._CB312738417_.png",
-    "link_url": "http://amzn.to/1H2AP8R",
-    "tags": "rush,holiday,birthday,coworker,acquaintance,stocking-stuffer,gift card"
-},
-  {
     "title": "Amazon Gift Card - $100",
     "brand": "Amazon",
     "description": "Don't risk getting them something they don't want. Amazon stocks just about everything under the sun and will ship quickly to Prime members. Send an Amazon gift card for instant delivery.",
