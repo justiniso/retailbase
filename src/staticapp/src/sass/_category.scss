@@ -94,7 +94,19 @@
 
     .featured-category-image {
         @extend .category-image;
-        opacity: 0.6;
+
+        max-height: 400px;
+        overflow: hidden;
+
+        .inner-wrap {
+            height: 400px;
+            width: 36000px;
+        }
+
+        img, a {
+            height: 100%;
+            float: left;
+        }
 
     }
 
