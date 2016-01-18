@@ -1,9 +1,18 @@
 
 footer {
 
-    @include shadow();
-
-    background-color: black;
-    color: white;
+    background-color: #F5F5F5;
     padding: 40px 0 40px 0;
+}
+
+#mc_embed_signup {
+
+    label {
+        font-size: 0.8em;
+    }
+
+    input[type="email"] {
+        width: 600px;
+    }
+
 }
