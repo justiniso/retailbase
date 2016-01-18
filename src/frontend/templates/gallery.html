@@ -7,11 +7,11 @@
         <figure class="featured-category">
             <div class="featured-category-image" style="background: url({{ category.banner_url }}) 50% 0 / cover no-repeat;"></div>
         </figure>
-    {% elif posts.__len__() >= 3 %}
+    {% else %}
         <figure class="featured-category">
             <div class="featured-category-image">
                 <div class="inner-wrap">
-                    {% for post in posts %}
+                    {% for post in posts * 3 %}
                         <a href="{{post.link_url}}">
                             <img src="{{post.thumbnail_url}}" title="{{post.title}}" >
                         </a>

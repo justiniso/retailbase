@@ -64,8 +64,8 @@ def gifts(tag, _request=request):
     meta_description = 'Find perfect {} gifts and hundreds more from our hand-picked list on LastMinGift.com. ' \
                        'Fast shipping available for last-minute gifts.'.format(category_name)
     return render_template('gallery.html',
-                           posts=posts,
-                           featured_posts=featured_posts,
+                           posts=list(posts),
+                           featured_posts=list(featured_posts),
                            category=category,
                            tag=category_name,
                            title=title,
